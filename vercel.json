@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/404"
+    },
+    {
+      "source": "/:path((?!home-page/home-two|assets/).*)",
+      "destination": "/404"
+    }
+  ]
+}
