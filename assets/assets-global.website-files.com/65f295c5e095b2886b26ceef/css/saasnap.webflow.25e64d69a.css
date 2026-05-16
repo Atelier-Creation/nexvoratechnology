@@ -2930,7 +2930,7 @@ figure {
   z-index: 8;
   color: var(--white);
   text-transform: capitalize;
-  background-color:var(--primary-color);
+  background-color: var(--primary-color);
   border-radius: 80px;
   width: 100%;
   height: 100%;
@@ -6369,6 +6369,7 @@ figure {
   align-self: stretch;
   align-items: flex-start;
   padding-bottom: 40px;
+  border-top-left-radius: 50px;
   display: flex;
   position: relative;
 }
@@ -7003,8 +7004,8 @@ figure {
 .submit-button {
   grid-column-gap: 8px;
   grid-row-gap: 8px;
-  background-color: var(--black);
-  color: var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--white);
   border-radius: 80px;
   justify-content: center;
   align-items: center;
@@ -7017,7 +7018,7 @@ figure {
 }
 
 .submit-button:hover {
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   color: var(--black);
 }
 
