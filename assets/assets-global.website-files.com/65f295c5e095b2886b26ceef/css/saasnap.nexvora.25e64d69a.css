@@ -204,7 +204,7 @@ th {
 }
 
 @font-face {
-  font-family: webflow-icons;
+  font-family: nexvora-icons;
   src: url("data:application/x-font-ttf;charset=utf-8;base64,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") format("truetype");
   font-weight: normal;
   font-style: normal;
@@ -220,7 +220,7 @@ th {
   font-style: normal;
   font-weight: normal;
   line-height: 1;
-  font-family: webflow-icons !important;
+  font-family: nexvora-icons !important;
 }
 
 .w-icon-slider-right:before {
@@ -328,7 +328,7 @@ pre.w-code-block code {
   all: inherit;
 }
 
-.w-webflow-badge {
+.w-nexvora-badge {
   display: none !important;
 }
 
@@ -2205,7 +2205,7 @@ textarea.w-select {
 
 .w-checkbox-input--inputType-custom.w--redirected-checked {
   background-color: #3898ec;
-  background-image: url("https://d3e54v103j8qbb.cloudfront.net/static/custom-checkbox-checkmark.589d534424.svg");
+  background-image: url("../../../d3e54v103j8qbb.cloudfront.net/static/custom-checkbox-checkmark.589d534424.svg");
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -3323,7 +3323,7 @@ figure {
   color: var(--primary-color);
 }
 
-.webflow-link {
+.nexvora-link {
   color: var(--black);
   cursor: pointer;
   font-weight: 500;
@@ -3331,15 +3331,15 @@ figure {
   transition: color .3s;
 }
 
-.webflow-link:hover {
+.nexvora-link:hover {
   color: var(--primary-color-two);
 }
 
-.webflow-link.white-text {
+.nexvora-link.white-text {
   color: var(--white);
 }
 
-.webflow-link.white-text:hover {
+.nexvora-link.white-text:hover {
   color: var(--primary-color);
 }
 
@@ -3624,7 +3624,7 @@ figure {
 
 .list-item {
   color: var(--black);
-  background-image: url("https://assets-global.website-files.com/65f295c5e095b2886b26ceef/65fbcf87affa13bb0801ac5a_list-checkmark.svg");
+  background-image: url("../65fbcf87affa13bb0801ac5a_list-checkmark.svg");
   background-position: 0%;
   background-repeat: no-repeat;
   background-size: auto;
@@ -4127,7 +4127,7 @@ figure {
 }
 
 .feature-banner-block {
-  background-image: url("https://assets-global.website-files.com/65f295c5e095b2886b26ceef/6600ec614310d982f4a2c12d_features-banner-bg.png"), linear-gradient(103deg, #c2f96c, #5b93ff);
+  background-image: url("../6600ec614310d982f4a2c12d_features-banner-bg.png"), linear-gradient(103deg, #c2f96c, #5b93ff);
   background-position: 50%, 0 0;
   background-repeat: no-repeat, repeat;
   background-size: auto, auto;
@@ -7733,7 +7733,7 @@ figure {
 
 .feature-call-service-wrap {
   z-index: 6;
-  background-image: url("https://assets-global.website-files.com/65f295c5e095b2886b26ceef/6620ab219945a552165cdd86_call-service-bg.jpg");
+  background-image: url("../6620ab219945a552165cdd86_call-service-bg.jpg");
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -15637,7 +15637,7 @@ figure {
 
 @font-face {
   font-family: 'Outfit';
-  src: url('https://uploads-ssl.webflow.com/65f295c5e095b2886b26ceef/65f2aac4c4574cc92c8f9d52_Outfit-ExtraBold.ttf') format('truetype'), url('https://uploads-ssl.webflow.com/65f295c5e095b2886b26ceef/65f2aac51f2b91ff16f60acc_Outfit-Bold.ttf') format('truetype');
+  src: url('https://uploads-ssl.nexvora.com/65f295c5e095b2886b26ceef/65f2aac4c4574cc92c8f9d52_Outfit-ExtraBold.ttf') format('truetype'), url('https://uploads-ssl.nexvora.com/65f295c5e095b2886b26ceef/65f2aac51f2b91ff16f60acc_Outfit-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -15645,7 +15645,7 @@ figure {
 
 @font-face {
   font-family: 'Outfit';
-  src: url('https://uploads-ssl.webflow.com/65f295c5e095b2886b26ceef/65f2aac4dd60f9bcfbbd04e0_Outfit-Regular.ttf') format('truetype');
+  src: url('https://uploads-ssl.nexvora.com/65f295c5e095b2886b26ceef/65f2aac4dd60f9bcfbbd04e0_Outfit-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -15653,7 +15653,7 @@ figure {
 
 @font-face {
   font-family: 'Outfit';
-  src: url('https://uploads-ssl.webflow.com/65f295c5e095b2886b26ceef/65f2aac41510d6f5715ab0fa_Outfit-SemiBold.ttf') format('truetype');
+  src: url('https://uploads-ssl.nexvora.com/65f295c5e095b2886b26ceef/65f2aac41510d6f5715ab0fa_Outfit-SemiBold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -15661,7 +15661,7 @@ figure {
 
 @font-face {
   font-family: 'Outfit';
-  src: url('https://uploads-ssl.webflow.com/65f295c5e095b2886b26ceef/65f2aac41b05369ff0d30c60_Outfit-Medium.ttf') format('truetype');
+  src: url('https://uploads-ssl.nexvora.com/65f295c5e095b2886b26ceef/65f2aac41b05369ff0d30c60_Outfit-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -15669,7 +15669,7 @@ figure {
 
 @font-face {
   font-family: 'Prompt';
-  src: url('https://uploads-ssl.webflow.com/65f295c5e095b2886b26ceef/65f2ab07d60fecbf8435c38c_Prompt-Medium.ttf') format('truetype');
+  src: url('https://uploads-ssl.nexvora.com/65f295c5e095b2886b26ceef/65f2ab07d60fecbf8435c38c_Prompt-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -15677,7 +15677,7 @@ figure {
 
 @font-face {
   font-family: 'Prompt';
-  src: url('https://uploads-ssl.webflow.com/65f295c5e095b2886b26ceef/65f2ab07dd60f9bcfbbd32dc_Prompt-Bold.ttf') format('truetype');
+  src: url('https://uploads-ssl.nexvora.com/65f295c5e095b2886b26ceef/65f2ab07dd60f9bcfbbd32dc_Prompt-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -15685,7 +15685,7 @@ figure {
 
 @font-face {
   font-family: 'Prompt';
-  src: url('https://uploads-ssl.webflow.com/65f295c5e095b2886b26ceef/65f2ab07ba141c96012f1214_Prompt-Regular.ttf') format('truetype');
+  src: url('https://uploads-ssl.nexvora.com/65f295c5e095b2886b26ceef/65f2ab07ba141c96012f1214_Prompt-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -15693,7 +15693,7 @@ figure {
 
 @font-face {
   font-family: 'Prompt';
-  src: url('https://uploads-ssl.webflow.com/65f295c5e095b2886b26ceef/65f2ab07eaba8cd1f93ed911_Prompt-SemiBold.ttf') format('truetype');
+  src: url('https://uploads-ssl.nexvora.com/65f295c5e095b2886b26ceef/65f2ab07eaba8cd1f93ed911_Prompt-SemiBold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
