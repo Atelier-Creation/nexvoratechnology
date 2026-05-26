@@ -21,8 +21,8 @@ fs.writeFileSync('./careers/frontend-developer.html', integrationContent, 'utf-8
 console.log('Successfully replaced header and footer in frontend-developer.html');
 
 // Replace CSS link in all HTML files
-// const oldLink = 'https://assets-global.website-files.com/65f295c5e095b2886b26ceef/css/saasnap.nexvora.25e64d69a.css';
-// const newLink = '../assets/assets-global.website-files.com/65f295c5e095b2886b26ceef/css/saasnap.nexvora.25e64d69a.css';
+// const oldLink = 'https://assets-global.website-files.com/65f295c5e095b2886b26ceef/css/nexvora.nexvora.25e64d69a.css';
+// const newLink = '../assets/assets-global.website-files.com/65f295c5e095b2886b26ceef/css/nexvora.nexvora.25e64d69a.css';
 
 // function replaceLinkInFiles(dir) {
 //     const files = fs.readdirSync(dir);

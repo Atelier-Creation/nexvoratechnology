@@ -4921,8 +4921,8 @@ figure {
 }
 
 .hero-section-wrapper-two {
-  margin-top: 218px;
-  margin-bottom: -100px;
+  /* margin-top: 218px; */
+  margin-bottom: -70px;
 }
 
 .hero-title-two {
@@ -8949,7 +8949,7 @@ figure {
 
 @media screen and (min-width: 1280px) {
   h1 {
-    font-size: 64px;
+    font-size: 44px;
   }
 
   h2 {
@@ -9375,11 +9375,11 @@ figure {
   }
 
   .hero-two-banner-card-one-wrap {
-    left: 50px;
+    left: -55px;
   }
 
   .hero-two-banner-card-two-wrap {
-    right: 100px;
+    right: -100px;
   }
 
   .key-features-slider-block {
@@ -11626,7 +11626,7 @@ figure {
     right: -70px;
   }
 
-  .saasnap-logo-wrap {
+  .nexvora-logo-wrap {
     margin-right: -10px;
   }
 
@@ -12185,7 +12185,7 @@ figure {
   }
 
   .hero-section-wrapper-two {
-    margin-top: 200px;
+    /* margin-top: 200px; */
   }
 
   .hero-newsletter-form {
@@ -13376,7 +13376,7 @@ figure {
   }
 
   .hero-section-wrapper-two {
-    margin-top: 160px;
+    /* margin-top: 160px; */
     margin-bottom: -20px;
   }
 
@@ -14949,7 +14949,7 @@ figure {
     overflow: hidden;
   }
 
-  .saasnap-logo-wrap {
+  .nexvora-logo-wrap {
     max-width: 35px !important;
   }
 
@@ -15697,4 +15697,262 @@ figure {
   font-weight: 600;
   font-style: normal;
   font-display: swap;
+}
+
+/* Nexvora client update layer */
+body {
+  font-family: Poppins, Prompt, Outfit, Arial, sans-serif;
+}
+
+.page-wrapper {
+  padding-top: 96px;
+}
+
+.header-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.94);
+  border-bottom: 1px solid rgba(13, 24, 18, 0.08);
+  box-shadow: 0 16px 40px rgba(13, 24, 18, 0.06);
+  backdrop-filter: blur(18px);
+}
+
+.header-nav-block {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.hero-section-two {
+  min-height: calc(100vh - 155px);
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(circle at 72% 26%, rgba(91, 147, 255, 0.18), transparent 34%),
+    linear-gradient(135deg, #f7fff0 0%, #ffffff 46%, #edf4ff 100%);
+}
+
+.hero-section-wrapper-two {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(360px, 1.08fr);
+  align-items: center;
+  column-gap: 56px;
+}
+
+.hero-title-block {
+  grid-column: 1;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.hero-title-two,
+.hero-excerpt {
+  text-align: left;
+}
+
+.hero-newsletter-block {
+  grid-column: 1;
+}
+
+.hero-two-banner-block {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  margin-top: 0;
+}
+
+.hero-title-two,
+.breadcrumb-title,
+.section-title {
+  letter-spacing: 0;
+}
+
+.section-title,
+.breadcrumb-title {
+  font-family: Poppins, Prompt, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.about-hero-excerpt,
+.our-principles-item-excerpt,
+.footer-about-excerpt,
+.hero-excerpt,
+.key-feature-excerpt {
+  font-family: Poppins, Prompt, Arial, sans-serif;
+  font-weight: 400;
+}
+
+.button-primary,
+.hero-newsletter-submit-button,
+.subscribe-button {
+  background: linear-gradient(135deg, #0d1812 0%, #2768ff 100%);
+}
+
+.feature-icon-wrap,
+.integration-icon-block,
+.contact-info-icon-wrap {
+  background: linear-gradient(135deg, rgba(194, 249, 108, 0.35), rgba(91, 147, 255, 0.22));
+}
+
+.feaute-icon-bg-defult-overly,
+.feature-bg-overly {
+  background-color: #d7f5d6 !important;
+}
+
+.about-hero-banner-block,
+.fun-fact-banner-wrap,
+.our-team-section {
+  display: none !important;
+}
+
+.about-hero-wrapper {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.about-hero-content-block {
+  max-width: 980px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.about-hero-content-block .section-title,
+.about-hero-content-block .about-hero-excerpt {
+  max-width: 980px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.nexvora-showcase-section {
+  background:
+    linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+}
+
+.nexvora-product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.nexvora-product-card {
+  min-height: 260px;
+  padding: 32px;
+  border: 1px solid rgba(13, 24, 18, 0.1);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 20px 60px rgba(13, 24, 18, 0.06);
+}
+
+.nexvora-product-card.featured-product {
+  background: linear-gradient(135deg, #0d1812 0%, #2768ff 100%);
+  color: #ffffff;
+}
+
+.nexvora-product-card h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-family: Poppins, Prompt, Arial, sans-serif;
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+.nexvora-product-card p {
+  margin-bottom: 0;
+  color: inherit;
+  line-height: 1.7;
+}
+
+.nexvora-product-label {
+  display: inline-flex;
+  margin-bottom: 18px;
+  padding: 7px 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.16);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.blog-section .blog-wrapper,
+.blog-section .main-blog-item-wrap {
+  max-width: 100%;
+}
+
+.blog-section .main-blog-item {
+  border-radius: 8px;
+}
+
+.blog-section .main-blog-image {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.blog-section .main-blog-content-wrap {
+  margin-top: 20px;
+}
+
+.blog-section .main-blog-name-link {
+  font-size: 22px;
+  line-height: 1.25;
+}
+
+.blog-section .blog-excerpt {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.contact-form-block {
+  max-width: 940px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 36px;
+  border: 1px solid rgba(13, 24, 18, 0.1);
+  border-radius: 8px;
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+  box-shadow: 0 24px 70px rgba(13, 24, 18, 0.08);
+}
+
+.credential-input-field,
+.contact-input-field,
+.contact-textarea {
+  border-radius: 8px;
+}
+
+.faq-card {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+@media screen and (max-width: 991px) {
+  .page-wrapper {
+    padding-top: 84px;
+  }
+
+  .hero-section-two {
+    min-height: auto;
+    padding-top: 72px;
+  }
+
+  .hero-section-wrapper-two {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+  }
+
+  .hero-title-block,
+  .hero-newsletter-block,
+  .hero-two-banner-block {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .hero-title-block,
+  .hero-title-two,
+  .hero-excerpt {
+    text-align: center;
+    align-items: center;
+  }
+
+  .nexvora-product-grid {
+    grid-template-columns: 1fr;
+  }
 }

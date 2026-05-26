@@ -121,7 +121,7 @@
       <div class="w-layout-blockcontainer container w-container">
         <div class="breadcrumb-wrapper">
           <div class="breadcrumb-title-block align-item-center">
-            <h1 class="breadcrumb-title text-center max-width-780px">Join the Conversation on the SaaSnap Blog.</h1>
+            <h1 class="breadcrumb-title text-center max-width-780px">Join the Conversation on the Nexvora Blog.</h1>
           </div>
           <div class="breadcrumb-link-wrap"><a href="/home-page/home-one" class="single-page-link">Home</a><img
               src="./assets/cdn.prod.website-files.com/65f295c5e095b2886b26ceef/65f91af3c05f0be69d39c865_link-separator-arrow.svg"
@@ -254,8 +254,7 @@
                 class="footer-logo-link-wrap w-inline-block"><img
                   src="./assets/cdn.prod.website-files.com/65f295c5e095b2886b26ceef/65f95846dc04cb6fb9e98582_footer-brand-logo.png"
                   loading="lazy" alt="Footer Logo" class="footer-logo" /></a>
-              <div class="footer-about-excerpt max-width-470px">Welcome to SaaSnap, a revolutionary SaaS website
-                template designed to elevate your digital experience.</div>
+              <div class="footer-about-excerpt max-width-470px">Nexvora Technologies builds CRM, ERP, custom software, automation, web apps, analytics, and smart retail solutions that help businesses operate smarter, faster, and more efficiently.</div>
             </div>
             <div class="footer-newsletter-block">
               <div class="newsletter-title">Subscribe to Our Newsletter</div>
@@ -474,7 +473,7 @@
           </div>
           <div class="copy-right-block">
             <div class="footer-copyright-center">Copyright © <a href="/home-page/home-one"
-                class="template-link">SaaSnap</a>| Designed by <a href="https://brandbes.com/" target="_blank"
+                class="template-link">Nexvora</a>| Designed by <a href="https://brandbes.com/" target="_blank"
                 class="brandbes-link">Brandbes </a>- Powered by <a
                 href="https://nexvora.com/templates/designers/brandbes" target="_blank" class="nexvora-link">Nexvora</a>
             </div>
