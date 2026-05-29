@@ -1,0 +1,219 @@
+.gradient-heading-text {
+  display: inline-block;
+  background: linear-gradient(90deg, #1165ff 0%, #2768ff 42%, #b64ce6 72%, #ff5aa5 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-transform: capitalize;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.demo-popup-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(13, 18, 24, 0.72);
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+.demo-popup-overlay.is-visible {
+  display: flex;
+}
+
+.demo-popup-overlay.is-open {
+  opacity: 1;
+}
+
+.demo-popup-modal {
+  position: relative;
+  width: min(100%, 820px);
+  overflow: visible;
+  border: 1px solid rgba(13, 18, 24, 0.08);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.24);
+  transform: translateY(18px) scale(0.98);
+  transition: transform 200ms ease;
+}
+
+.demo-popup-overlay.is-open .demo-popup-modal {
+  transform: translateY(0) scale(1);
+}
+
+.demo-popup-header {
+  padding: 24px 32px 0;
+}
+
+.demo-popup-title {
+  margin: 0;
+  color: #0d1218;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.demo-popup-copy {
+  margin: 8px 0 0;
+  color: #4d4d4d;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.demo-popup-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(13, 18, 24, 0.12);
+  border-radius: 50%;
+  background: #fff;
+  color: #0d1218;
+  cursor: pointer;
+  font-size: 26px;
+  line-height: 1;
+}
+
+.demo-popup-close:hover {
+  background: linear-gradient(135deg, #0d1812 0%, #2768ff 100%);
+  color: #fff;
+}
+
+.demo-popup-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 16px;
+  padding: 20px 32px 28px;
+}
+
+.demo-popup-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.demo-popup-field.full-width {
+  grid-column: auto;
+}
+
+.demo-popup-field.phone-full-width {
+  grid-column: 1 / -1;
+}
+
+.demo-popup-label {
+  color: #0d1218;
+  font-size: 14px;
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+.demo-popup-input,
+.demo-popup-select {
+  min-height: 44px;
+  width: 100%;
+  margin-bottom: 0;
+  border: 1px solid rgba(13, 18, 24, 0.18);
+  border-radius: 8px;
+  background-color: #fff;
+  color: #0d1218;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.demo-popup-input {
+  padding: 10px 14px;
+}
+
+.demo-popup-select {
+  padding: 10px 42px 10px 14px;
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, #0d1218 50%), linear-gradient(135deg, #0d1218 50%, transparent 50%);
+  background-position: calc(100% - 20px) 19px, calc(100% - 14px) 19px;
+  background-size: 7px 7px, 7px 7px;
+  background-repeat: no-repeat;
+}
+
+.demo-popup-input::placeholder {
+  color: #6f7a87;
+}
+
+.demo-popup-input:focus,
+.demo-popup-select:focus {
+  border-color: #5b93ff;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(91, 147, 255, 0.18);
+}
+
+.demo-popup-submit {
+  grid-column: 1 / -1;
+  min-height: 50px;
+  margin-top: 4px;
+  border: 0;
+  border-radius: 100px;
+  background: linear-gradient(135deg, #0d1812 0%, #2768ff 100%);
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.demo-popup-submit:hover {
+  background: #0d1812;
+  color: #fff;
+}
+
+.demo-popup-success {
+  display: none;
+  grid-column: 1 / -1;
+  padding: 14px 16px;
+  border-radius: 8px;
+  background: rgba(39, 104, 255, 0.12);
+  color: #0d1218;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.demo-popup-form.is-submitted .demo-popup-success {
+  display: block;
+}
+
+body.demo-popup-lock {
+  overflow: hidden;
+}
+
+@media screen and (max-width: 767px) {
+  .demo-popup-overlay {
+    padding: 16px;
+  }
+
+  .demo-popup-modal {
+    width: min(100%, 520px);
+  }
+
+  .demo-popup-header {
+    padding: 20px 22px 0;
+  }
+
+  .demo-popup-title {
+    padding-right: 34px;
+    font-size: 24px;
+  }
+
+  .demo-popup-form {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 18px 22px 22px;
+  }
+
+  .demo-popup-field.full-width {
+    grid-column: 1 / -1;
+  }
+}
