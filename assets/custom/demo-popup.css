@@ -109,6 +109,16 @@
   transform: translateY(-50%) rotate(0deg);
 }
 
+.home-faq-answer-wrap {
+  height: 0;
+  overflow: hidden;
+  transition: height 260ms ease;
+}
+
+.home-faq-item[open] .home-faq-answer-wrap {
+  height: auto;
+}
+
 .home-faq-answer {
   padding: 20px 24px 22px;
   color: #5f6980;
@@ -142,7 +152,7 @@
   width: min(100%, 820px);
   overflow: visible;
   border: 1px solid rgba(13, 18, 24, 0.08);
-  border-radius: 8px;
+  border-radius: 20px;
   background: #fff;
   box-shadow: 0 24px 80px rgba(0, 0, 0, 0.24);
   transform: translateY(18px) scale(0.98);
@@ -272,10 +282,18 @@
 .demo-popup-submit {
   grid-column: 1 / -1;
   min-height: 50px;
-  margin-top: 4px;
+  margin-top: 20px;
   border: 0;
   border-radius: 100px;
-  background: linear-gradient(135deg, #0d1812 0%, #2768ff 100%);
+   background: linear-gradient(
+    135deg,
+    #0d1812 0%,
+    #2768ff 50%,
+    #0d1812 100%
+  );
+  background-size: 200% 200%;
+  background-position: left center;
+  transition: background-position 0.4s ease-in-out;
   color: #fff;
   cursor: pointer;
   font-size: 16px;
@@ -283,7 +301,7 @@
 }
 
 .demo-popup-submit:hover {
-  background: #0d1812;
+  background-position: right center;
   color: #fff;
 }
 
@@ -307,6 +325,70 @@ body.demo-popup-lock {
 }
 
 @media screen and (max-width: 767px) {
+  .hero-section-two {
+    overflow-x: hidden;
+    padding-bottom: 32px;
+  }
+
+  .hero-two-banner-block.align-item-center {
+    position: relative !important;
+    display: block;
+    width: 100%;
+    max-width: 430px;
+    height: clamp(265px, 82vw, 330px);
+    margin: 20px auto 0;
+    overflow: hidden;
+  }
+
+  .hero-two-banner-image-wrap {
+    position: absolute !important;
+    top: 0px !important;
+    bottom: auto !important;
+    left: 50%;
+    z-index: 3;
+    width: min(90vw, 400px);
+    max-width: none;
+    transform: translate3d(-50%, 0, 0) !important;
+  }
+
+  .hero-two-banner-image {
+    width: 100%;
+    max-width: none;
+  }
+
+  .hero-two-banner-card-one-wrap {
+    position: absolute !important;
+    top: 12px !important;
+    left: 3% !important;
+    right: auto !important;
+    z-index: 2;
+    width: min(30vw, 126px);
+    max-width: none;
+    margin: 0;
+    transform: rotate(-17deg) !important;
+  }
+
+  .hero-two-banner-card-two-wrap {
+    position: absolute !important;
+    top: 75px !important;
+    right: 2% !important;
+    left: auto !important;
+    z-index: 4;
+    width: min(30vw, 126px);
+    max-width: none;
+    margin: 0;
+    transform: rotate(17deg) !important;
+  }
+
+  .hero-two-banner-card-one,
+  .hero-two-banner-card-two {
+    width: 100%;
+  }
+
+  .rounded-vector-shape-image {
+    display: none;
+  }
+
   .home-faq-reference {
     padding-top: 72px;
     padding-bottom: 28px;
@@ -361,5 +443,26 @@ body.demo-popup-lock {
 
   .demo-popup-field.full-width {
     grid-column: 1 / -1;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .hero-two-banner-block.align-item-center {
+    height: 278px;
+  }
+
+  .hero-two-banner-image-wrap {
+    top: 42px !important;
+    width: 108vw;
+  }
+
+  .hero-two-banner-card-one-wrap {
+    top: 86px !important;
+    width: 92px;
+  }
+
+  .hero-two-banner-card-two-wrap {
+    top: 166px !important;
+    width: 102px;
   }
 }

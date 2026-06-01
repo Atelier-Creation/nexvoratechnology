@@ -1,4 +1,77 @@
 (function () {
+  function initHomeFaqAccordion() {
+    var accordion = document.querySelector(".home-faq-accordion");
+    if (!accordion) return;
+
+    var items = Array.prototype.slice.call(accordion.querySelectorAll(".home-faq-item"));
+    if (!items.length) return;
+
+    function setPanelHeight(item, height) {
+      var panel = item.querySelector(".home-faq-answer-wrap");
+      if (panel) {
+        panel.style.height = height;
+      }
+    }
+
+    function openItem(item) {
+      var panel = item.querySelector(".home-faq-answer-wrap");
+      if (!panel || item.open) return;
+
+      item.open = true;
+      setPanelHeight(item, "0px");
+      window.requestAnimationFrame(function () {
+        setPanelHeight(item, panel.scrollHeight + "px");
+      });
+    }
+
+    function closeItem(item) {
+      var panel = item.querySelector(".home-faq-answer-wrap");
+      if (!panel || !item.open) return;
+
+      setPanelHeight(item, panel.scrollHeight + "px");
+      window.requestAnimationFrame(function () {
+        setPanelHeight(item, "0px");
+      });
+
+      window.setTimeout(function () {
+        if (panel.style.height === "0px") {
+          item.open = false;
+        }
+      }, 260);
+    }
+
+    items.forEach(function (item) {
+      var panel = item.querySelector(".home-faq-answer-wrap");
+      var summary = item.querySelector(".home-faq-question");
+      if (!panel || !summary) return;
+
+      panel.style.height = item.open ? panel.scrollHeight + "px" : "0px";
+
+      summary.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        if (item.open) {
+          closeItem(item);
+          return;
+        }
+
+        items.forEach(function (otherItem) {
+          if (otherItem !== item) {
+            closeItem(otherItem);
+          }
+        });
+
+        openItem(item);
+      });
+
+      panel.addEventListener("transitionend", function () {
+        if (item.open && panel.style.height !== "0px") {
+          panel.style.height = "auto";
+        }
+      });
+    });
+  }
+
   var popupDelay = 10000;
   var enquiryEmail = "info@nexvora.com";
 
@@ -153,6 +226,8 @@
   }
 
   function init() {
+    initHomeFaqAccordion();
+
     var overlay = createPopup();
     bindPopup(overlay);
     window.setTimeout(function () {
