@@ -16530,3 +16530,162 @@ b,
 .medium-text {
   font-weight: 500;
 }
+
+@media screen and (max-width: 479px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .header-section > .container,
+  .hero-section-two .hero-two-fluid-container {
+    width: 100%;
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .header-nav-block {
+    width: 100%;
+    padding: 10px 12px !important;
+    overflow: hidden;
+  }
+
+  .header-navbar-wrapper {
+    grid-column-gap: 12px;
+    grid-row-gap: 12px;
+    width: 100%;
+  }
+
+  .logo {
+    width: clamp(108px, 31vw, 132px);
+    min-width: 112px;
+    max-width: 132px;
+  }
+
+  .nav-menu-button-wrapper {
+    flex: none;
+    margin-left: auto;
+  }
+
+  .button-primary-for-header {
+    padding: 12px clamp(16px, 4.8vw, 20px) !important;
+    font-size: clamp(13px, 3.4vw, 14px) !important;
+    box-shadow: 2.5px 4px 0 0 var(--secondary-color);
+  }
+
+  .hero-section-two {
+    overflow-x: hidden;
+    padding-top: 54px;
+    padding-bottom: 32px;
+  }
+
+  .hero-section-wrapper-two {
+    row-gap: 28px;
+  }
+
+  .hero-title-two.max-width-1050px {
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(30px, 8.8vw, 37px) !important;
+    line-height: 1.36;
+  }
+
+  .hero-excerpt.max-width-850px {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 22px;
+    font-size: clamp(14px, 4vw, 17px) !important;
+    line-height: 1.55;
+  }
+
+  .hero-newsletter-form {
+    width: min(74vw, 280px);
+  }
+
+  .hero-newsletter-input-field.max-width-420px,
+  .hero-newsletter-submit-button {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-two-banner-block.align-item-center {
+    position: relative !important;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: clamp(255px, 76vw, 318px);
+    margin: 20px auto 0;
+    overflow: hidden;
+  }
+
+  .hero-two-banner-image-wrap {
+    position: absolute !important;
+    top: clamp(18px, 6vw, 28px) !important;
+    bottom: auto !important;
+    left: 50%;
+    z-index: 3;
+    width: 100%;
+    max-width: none;
+    transform: translate3d(-50%, 0, 0) !important;
+  }
+
+  .hero-two-banner-image {
+    width: 100%;
+    max-width: none;
+  }
+
+  .hero-two-banner-card-one-wrap {
+    position: absolute !important;
+    top: clamp(44px, 14vw, 62px) !important;
+    left: 2% !important;
+    right: auto !important;
+    z-index: 2;
+    width: min(27vw, 108px);
+    max-width: none;
+    margin: 0;
+    transform: rotate(-17deg) !important;
+  }
+
+  .hero-two-banner-card-two-wrap {
+    position: absolute !important;
+    top: clamp(102px, 29vw, 130px) !important;
+    right: 2% !important;
+    left: auto !important;
+    z-index: 4;
+    width: min(29vw, 116px);
+    max-width: none;
+    margin: 0;
+    transform: rotate(17deg) !important;
+  }
+
+  .hero-two-banner-card-one,
+  .hero-two-banner-card-two {
+    width: 100%;
+  }
+
+  .rounded-vector-shape-image {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .hero-two-banner-block.align-item-center {
+    height: 252px;
+  }
+
+  .hero-two-banner-image-wrap {
+    top: 26px !important;
+    width: 100%;
+  }
+
+  .hero-two-banner-card-one-wrap {
+    top: 50px !important;
+    width: 86px;
+  }
+
+  .hero-two-banner-card-two-wrap {
+    top: 104px !important;
+    width: 94px;
+  }
+}
