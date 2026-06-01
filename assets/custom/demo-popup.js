@@ -41,7 +41,7 @@
       '<div class="demo-popup-modal" role="document">',
       '<button class="demo-popup-close" type="button" aria-label="Close demo enquiry form">&times;</button>',
       '<div class="demo-popup-header">',
-      '<h2 class="demo-popup-title" id="demo-popup-title">Enquiry for Free Demo</h2>',
+      '<h2 class="demo-popup-title" id="demo-popup-title">Lets Get <span class="gradient-heading-text">Started</span> </h2>',
       '<p class="demo-popup-copy">Tell us a little about your business and we will help you choose the right Nexvora solution.</p>',
       "</div>",
       '<form class="demo-popup-form" id="demo-enquiry-form">',

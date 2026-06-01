@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
 html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -265,7 +267,7 @@ body {
   background-color: #fff;
   min-height: 100%;
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: Poppins, Arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
 }
@@ -1464,7 +1466,7 @@ textarea.w-select {
   -webkit-tap-highlight-color: transparent;
   background: rgba(0, 0, 0, .9);
   outline: 0;
-  font-family: Helvetica Neue, Helvetica, Ubuntu, Segoe UI, Verdana, sans-serif;
+  font-family: Poppins, Arial, sans-serif;
   font-size: 17px;
   font-style: normal;
   font-weight: 300;
@@ -2146,7 +2148,7 @@ textarea.w-select {
   --primary-bg-color: #eee;
   --black: black;
   --dark-white-color: #ced8e1;
-  --font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  --font-family: Poppins, Arial, sans-serif;
 }
 
 .w-layout-blockcontainer {
@@ -2235,7 +2237,7 @@ textarea.w-select {
 body {
   background-color: var(--transparent);
   color: var(--paragraph-color);
-  font-family: Outfit, sans-serif;
+  font-family: Poppins, Arial, sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
@@ -2245,7 +2247,7 @@ h1 {
   color: var(--black);
   margin-top: 0;
   margin-bottom: 0;
-  font-family: Outfit, sans-serif;
+  font-family: Poppins, Arial, sans-serif;
   font-size: 54px;
   font-weight: 600;
   line-height: 1.2;
@@ -2255,7 +2257,7 @@ h2 {
   color: var(--black);
   margin-top: 0;
   margin-bottom: 0;
-  font-family: Outfit, sans-serif;
+  font-family: Poppins, Arial, sans-serif;
   font-size: 42px;
   font-weight: 600;
   line-height: 1.3;
@@ -2265,7 +2267,7 @@ h3 {
   color: var(--black);
   margin-top: 0;
   margin-bottom: 0;
-  font-family: Outfit, sans-serif;
+  font-family: Poppins, Arial, sans-serif;
   font-size: 28px;
   font-weight: 600;
   line-height: 1.2;
@@ -2376,6 +2378,7 @@ figure {
   color: var(--paragraph-color);
   letter-spacing: .16px;
   font-size: 18px;
+  font-weight: 500;
   line-height: 1.2;
   text-decoration: none;
   transition: color .3s;
@@ -2415,6 +2418,7 @@ figure {
   grid-row-gap: 5px;
   color: var(--paragraph-color);
   letter-spacing: .16px;
+  font-weight: 500;
   justify-content: flex-start;
   align-items: center;
   padding: 0;
@@ -2555,6 +2559,7 @@ figure {
   margin-left: 0;
   margin-right: 0;
   padding: 0;
+  font-weight: 500;
   line-height: 1.2;
   transition: transform .3s, color .3s;
 }
@@ -2683,7 +2688,7 @@ figure {
 
 .single-page-link {
   color: var(--paragraph-color);
-  font-family: Prompt, sans-serif;
+  font-family: Poppins, Arial, sans-serif;
   font-weight: 400;
   line-height: 1.2;
   text-decoration: none;
@@ -2696,7 +2701,7 @@ figure {
 
 .page-link-text {
   color: var(--black);
-  font-family: Prompt, sans-serif;
+  font-family: Poppins, Arial, sans-serif;
   font-weight: 500;
   line-height: 1.2;
 }
@@ -2863,7 +2868,7 @@ figure {
   color: var(--black);
   width: 100%;
   padding: 10px 20px;
-  font-family: Prompt, sans-serif;
+  font-family: Poppins, Arial, sans-serif;
   font-weight: 500;
   text-decoration: none;
   transition: background-color .3s;
@@ -5019,9 +5024,9 @@ figure {
   border-radius: 20px;
   display: inline-block;
   position: absolute;
-  top: 100px;
+  top: 50px;
   bottom: auto;
-  left: 20px;
+  left: -30px !important;
   right: auto;
   transform: rotate(-17deg);
 }
@@ -5032,10 +5037,10 @@ figure {
   border-radius: 20px;
   display: inline-block;
   position: absolute;
-  top: 190px;
+  top: 230px;
   bottom: auto;
   left: auto;
-  right: 10px;
+  right: -10px !important;
   transform: rotate(17deg);
 }
 
@@ -5746,8 +5751,9 @@ figure {
 }
 
 .integration-item-logo-circle-block.circle-three {
-  background-color: var(--black);
-  border-style: solid;
+  background-color: rgba(238, 238, 238, 0.877);
+  border-style: none;
+  box-shadow: #333 3px 6px 0px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -5757,7 +5763,11 @@ figure {
   position: absolute;
   top: 50%;
   left: 50%;
+  transition: box-shadow 800ms ease-in-out ;
   transform: translate(-50%, -50%);
+}
+.integration-item-logo-circle-block.circle-three:hover{
+  box-shadow: #333 -3px 6px 0px;
 }
 
 .integration-item-logo-circle-block.circle-two {
@@ -6558,7 +6568,7 @@ figure {
   grid-row-gap: 8px;
   background-color: var(--primary-color);
   box-shadow: 3px 5px 0 0 var(--secondary-color);
-  color: var(--black);
+  color: var(--white);
   border-style: none;
   border-radius: 80px;
   justify-content: center;
@@ -6915,16 +6925,17 @@ figure {
 
 .cta-button {
   background-color: var(--primary-color);
-  color: var(--black);
+  color: var(--white);
   border-radius: 80px;
   padding: 20px 36px;
   font-weight: 600;
   line-height: 1;
-  transition: background-color .3s;
+  transition: all .3s ease-in-out;
 }
 
 .cta-button:hover {
   background-color: var(--white);
+  color: var(--black);
 }
 
 .star-shape-one {
@@ -9927,7 +9938,7 @@ figure {
   }
 
   h1 {
-    font-size: 72px;
+    font-size: 60px;
   }
 
   h2 {
@@ -15653,73 +15664,9 @@ figure {
   }
 }
 
-@font-face {
-  font-family: 'Outfit';
-  src: url('https://uploads-ssl.nexvora.com/65f295c5e095b2886b26ceef/65f2aac4c4574cc92c8f9d52_Outfit-ExtraBold.ttf') format('truetype'), url('https://uploads-ssl.nexvora.com/65f295c5e095b2886b26ceef/65f2aac51f2b91ff16f60acc_Outfit-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Outfit';
-  src: url('https://uploads-ssl.nexvora.com/65f295c5e095b2886b26ceef/65f2aac4dd60f9bcfbbd04e0_Outfit-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Outfit';
-  src: url('https://uploads-ssl.nexvora.com/65f295c5e095b2886b26ceef/65f2aac41510d6f5715ab0fa_Outfit-SemiBold.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Outfit';
-  src: url('https://uploads-ssl.nexvora.com/65f295c5e095b2886b26ceef/65f2aac41b05369ff0d30c60_Outfit-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Prompt';
-  src: url('https://uploads-ssl.nexvora.com/65f295c5e095b2886b26ceef/65f2ab07d60fecbf8435c38c_Prompt-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Prompt';
-  src: url('https://uploads-ssl.nexvora.com/65f295c5e095b2886b26ceef/65f2ab07dd60f9bcfbbd32dc_Prompt-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Prompt';
-  src: url('https://uploads-ssl.nexvora.com/65f295c5e095b2886b26ceef/65f2ab07ba141c96012f1214_Prompt-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Prompt';
-  src: url('https://uploads-ssl.nexvora.com/65f295c5e095b2886b26ceef/65f2ab07eaba8cd1f93ed911_Prompt-SemiBold.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
 /* Nexvora client update layer */
 body {
-  font-family: Poppins, Prompt, Outfit, Arial, sans-serif;
+  font-family: Poppins, Arial, sans-serif;
 }
 
 .page-wrapper {
@@ -15750,7 +15697,7 @@ body {
 }
 
 .hero-section-two {
-  min-height: calc(100vh - 155px);
+  min-height: calc(100vh - 220px);
   display: flex;
   align-items: center;
   background:
@@ -15794,8 +15741,8 @@ body {
 
 .section-title,
 .breadcrumb-title {
-  font-family: Poppins, Prompt, Arial, sans-serif;
-  font-weight: 700;
+  font-family: Poppins, Arial, sans-serif;
+  font-weight: 600;
 }
 
 .about-hero-excerpt,
@@ -15803,7 +15750,7 @@ body {
 .footer-about-excerpt,
 .hero-excerpt,
 .key-feature-excerpt {
-  font-family: Poppins, Prompt, Arial, sans-serif;
+  font-family: Poppins, Arial, sans-serif;
   font-weight: 400;
 }
 
@@ -15875,7 +15822,7 @@ body {
   align-items: center;
   padding: 44px;
   border: 1px solid rgba(13, 24, 18, 0.1);
-  border-radius: 8px;
+  border-radius: 20px;
   background: linear-gradient(135deg, #ffffff 0%, #f4f8ff 100%);
   box-shadow: 0 24px 80px rgba(13, 24, 18, 0.08);
 }
@@ -15894,7 +15841,7 @@ body {
 
 .product-secondary-link {
   color: #0d1812;
-  font-family: Poppins, Prompt, Arial, sans-serif;
+  font-family: Poppins, Arial, sans-serif;
   font-size: 16px;
   font-weight: 600;
   text-decoration: none;
@@ -15917,7 +15864,7 @@ body {
   width: min(100%, 330px);
   padding: 18px;
   border: 1px solid rgba(13, 24, 18, 0.12);
-  border-radius: 8px;
+  border-radius: 15px;
   background: #0d1812;
   box-shadow: 0 30px 80px rgba(13, 24, 18, 0.24);
   animation: productFloat 5s ease-in-out infinite;
@@ -16130,7 +16077,7 @@ body {
   border-radius: 8px;
   background: rgba(39, 104, 255, 0.1);
   color: #2768ff;
-  font-family: Poppins, Prompt, Arial, sans-serif;
+  font-family: Poppins, Arial, sans-serif;
   font-weight: 700;
 }
 
@@ -16149,7 +16096,7 @@ body {
   z-index: 2;
   margin-top: 0;
   margin-bottom: 16px;
-  font-family: Poppins, Prompt, Arial, sans-serif;
+  font-family: Poppins, Arial, sans-serif;
   font-size: 30px;
   line-height: 1.2;
 }
@@ -16261,7 +16208,7 @@ body {
   display: block;
   margin-bottom: 10px;
   color: #0d1812;
-  font-family: Poppins, Prompt, Arial, sans-serif;
+  font-family: Poppins, Arial, sans-serif;
   font-size: 22px;
   line-height: 1.25;
 }
@@ -16275,6 +16222,8 @@ body {
 
 .product-cta-strip {
   display: flex;
+  position: relative;
+  overflow: hidden;
   gap: 28px;
   align-items: center;
   justify-content: space-between;
@@ -16285,11 +16234,37 @@ body {
   color: #ffffff;
 }
 
+.product-cta-strip > div:not(.cta-start-shape-wrap),
+.product-cta-strip > a {
+  position: relative;
+  z-index: 1;
+}
+
+.product-cta-strip .cta-start-shape-wrap {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.product-cta-strip .star-shape-one {
+  max-width: 240px;
+  top: auto;
+  bottom: -115px;
+  left: -125px;
+}
+
+.product-cta-strip .star-shape-two {
+  max-width: 160px;
+  top: -80px;
+  right: -75px;
+}
+
 .product-cta-strip h2 {
   margin-top: 0;
   margin-bottom: 10px;
   color: #ffffff;
-  font-family: Poppins, Prompt, Arial, sans-serif;
+  font-family: Poppins, Arial, sans-serif;
   font-size: 30px;
   line-height: 1.25;
 }
@@ -16534,4 +16509,23 @@ body {
   .nexvora-product-card:before {
     transition: none;
   }
+}
+
+.breadcrumb-title {
+  font-weight: 700;
+}
+
+p,
+.paragraph,
+.small,
+.license-details,
+.style-guide-short-info {
+  font-family: Poppins, Arial, sans-serif;
+  font-weight: 400;
+}
+
+strong,
+b,
+.medium-text {
+  font-weight: 500;
 }

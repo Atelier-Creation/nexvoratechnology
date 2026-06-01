@@ -843,7 +843,7 @@
                 <div class="integration-item-logo-circle-block circle-three">
                   <div class="nexvora-logo-wrap" style="max-width: 55px;"><img
                       src="../assets/assets-global.website-files.com/65f295c5e095b2886b26ceef/6603e88e2ebeae3ab2b0de0c_Favicon.png"
-                      loading="lazy" alt="Insurbes Logo" class="nexvora-logo"></div>
+                      loading="lazy" alt="Insurbes Logo" class="nexvora-logo "></div>
                 </div>
               </div>
             </div>
@@ -1062,23 +1062,32 @@
         </div>
       </div>
     </section>
-    <section class="faq-section padding-top-140px">
+    <section class="faq-section home-faq-reference padding-top-140px">
       <div class="w-layout-blockcontainer container w-container">
-        <div class="section-title-block">
+        <div class="section-title-block home-faq-heading">
           <h2 data-w-id="776a2b2a-a28d-f7c2-5b51-9dd447f63b1e"
             style="-webkit-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
             class="section-title text-center">Frequently Asked <span class="gradient-heading-text">Questions</span></h2>
+          <p class="home-faq-subtitle">Find answers to common questions about Nexvora's software solutions, implementation process, and support.</p>
         </div>
-        <div class="faq-wrapper margin-top-64px">
-          <div class="faq-card-block">
-            <div data-w-id="614b8ec5-5c44-22c8-4751-62c8cf09eb59" class="faq-card">
-              <div class="faq-card-title">How does Nexvora start a project?</div><div class="faq-card-body"><p class="faq-card-excerpt margin-top-24px">We begin with workflow discovery, map your operational needs, recommend the right CRM, ERP, automation, or custom software approach, and then move into fast configuration and implementation.</p></div></div>
-            <div data-w-id="614b8ec5-5c44-22c8-4751-62c8cf09eb60" class="faq-card">
-              <div class="faq-card-title">Can Nexvora customize CRM or ERP systems for our workflow?</div><div class="faq-card-body"><p class="faq-card-excerpt margin-top-24px">Yes. We design CRM, ERP, automation, and reporting flows around your existing business process, so your team gets a system that matches daily operations instead of a generic setup.</p></div></div>
-            <div data-w-id="614b8ec5-5c44-22c8-4751-62c8cf09eb61" class="faq-card">
-              <div class="faq-card-title">What businesses can use the Nexvora Smart Billing Kiosk?</div><div class="faq-card-body"><p class="faq-card-excerpt margin-top-24px">The kiosk is built for retail stores, service counters, quick commerce, hospitality, and other customer-facing businesses that want faster billing, shorter queues, and a smoother checkout experience.</p></div></div>
-            <!-- <div data-w-id="614b8ec5-5c44-22c8-4751-62c8cf09eb62" class="faq-card">
-              <div class="faq-card-title">Does Nexvora provide support after implementation?</div><div class="faq-card-body"><p class="faq-card-excerpt margin-top-24px">Yes. We provide reliable post-launch support, improvements, and guidance so your software continues to perform well as your business grows and your processes evolve.</p></div></div> -->
+        <div class="faq-wrapper home-faq-wrapper margin-top-24px">
+          <div class="home-faq-accordion">
+            <details class="home-faq-item">
+              <summary class="home-faq-question">How does Nexvora start a project?</summary>
+              <div class="home-faq-answer">We begin with workflow discovery, map your operational needs, recommend the right CRM, ERP, automation, or custom software approach, and then move into fast configuration and implementation.</div>
+            </details>
+            <details class="home-faq-item">
+              <summary class="home-faq-question">Can Nexvora customize CRM or ERP systems for our workflow?</summary>
+              <div class="home-faq-answer">Yes. We design CRM, ERP, automation, and reporting flows around your existing business process, so your team gets a system that matches daily operations instead of a generic setup.</div>
+            </details>
+            <details class="home-faq-item" open>
+              <summary class="home-faq-question">What businesses can use the Nexvora Smart Billing Kiosk?</summary>
+              <div class="home-faq-answer">The kiosk is built for retail stores, service counters, quick commerce, hospitality, and other customer-facing businesses that want faster billing, shorter queues, and a smoother checkout experience.</div>
+            </details>
+            <details class="home-faq-item">
+              <summary class="home-faq-question">Does Nexvora provide support after implementation?</summary>
+              <div class="home-faq-answer">Yes. We provide reliable post-launch support, improvements, and guidance so your software continues to perform well as your business grows and your processes evolve.</div>
+            </details>
           </div>
         </div>
       </div>
@@ -1351,6 +1360,40 @@
   <script src="./assets/assets-global.website-files.com/65f295c5e095b2886b26ceef/js/nexvora.e9dee0cc4.js"
     type="text/javascript"></script>
   <script src="assets/custom/demo-popup.js" type="text/javascript"></script>
+  <script>
+    (function () {
+      var tabs = document.querySelector('.working-process-tabs');
+      if (!tabs) return;
+
+      var links = Array.prototype.slice.call(tabs.querySelectorAll('.working-process-tab-link'));
+      if (links.length < 2) return;
+
+      var intervalId;
+      var intervalTime = 5000;
+
+      function activeIndex() {
+        var current = tabs.querySelector('.working-process-tab-link.w--current');
+        var index = links.indexOf(current);
+        return index >= 0 ? index : 0;
+      }
+
+      function showNextTab() {
+        var nextIndex = (activeIndex() + 1) % links.length;
+        links[nextIndex].click();
+      }
+
+      function restartAutoTabs() {
+        window.clearInterval(intervalId);
+        intervalId = window.setInterval(showNextTab, intervalTime);
+      }
+
+      links.forEach(function (link) {
+        link.addEventListener('click', restartAutoTabs);
+      });
+
+      restartAutoTabs();
+    })();
+  </script>
 </body>
 
 </html>
