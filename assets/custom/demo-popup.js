@@ -118,38 +118,49 @@
       '<p class="demo-popup-copy">Tell us a little about your business and we will help you choose the right Nexvora solution.</p>',
       "</div>",
       '<form class="demo-popup-form" id="demo-enquiry-form">',
+      // '<div class="demo-popup-field">',
+      // '<label class="demo-popup-label" for="demo-first-name">First Name: *</label>',
+      // '<input class="demo-popup-input w-input" id="demo-first-name" name="First Name" data-name="First Name" maxlength="256" placeholder="Enter your first name" type="text" required>',
+      // "</div>",
+      // '<div class="demo-popup-field">',
+      // '<label class="demo-popup-label" for="demo-last-name">Last Name: *</label>',
+      // '<input class="demo-popup-input w-input" id="demo-last-name" name="Last Name" data-name="Last Name" maxlength="256" placeholder="Enter your last name" type="text" required>',
+      // "</div>",
       '<div class="demo-popup-field">',
-      '<label class="demo-popup-label" for="demo-first-name">First Name: *</label>',
-      '<input class="demo-popup-input w-input" id="demo-first-name" name="First Name" data-name="First Name" maxlength="256" placeholder="Enter your first name" type="text" required>',
-      "</div>",
-      '<div class="demo-popup-field">',
-      '<label class="demo-popup-label" for="demo-last-name">Last Name: *</label>',
-      '<input class="demo-popup-input w-input" id="demo-last-name" name="Last Name" data-name="Last Name" maxlength="256" placeholder="Enter your last name" type="text" required>',
-      "</div>",
+'<label class="demo-popup-label" for="demo-name">Name *</label>',
+'<input class="demo-popup-input w-input" id="demo-name" name="Name" maxlength="100" placeholder="Enter your name" type="text" pattern="[A-Za-z ]{3,100}" title="Only letters allowed" required>',      "</div>",
+     '<div class="demo-popup-field">',
+'<label class="demo-popup-label" for="demo-phone">Contact Number *</label>',
+'<input class="demo-popup-input w-input" id="demo-phone" name="Phone" maxlength="10" minlength="10" placeholder="Contact Number" type="tel" inputmode="numeric" pattern="[0-9]{10}" oninput="this.value=this.value.replace(/[^0-9]/g,\'\')" required>',
+"</div>",
       '<div class="demo-popup-field full-width">',
       '<label class="demo-popup-label" for="demo-business-email">Business Email *</label>',
-      '<input class="demo-popup-input w-input" id="demo-business-email" name="Business Email" data-name="Business Email" maxlength="256" placeholder="Enter your work email" type="email" required>',
+'<input class="demo-popup-input w-input" id="demo-business-email" name="Business Email" data-name="Business Email" maxlength="256" placeholder="Enter your work email" type="email" required>',
       "</div>",
       '<div class="demo-popup-field full-width">',
       '<label class="demo-popup-label" for="demo-company-name">Company Name: *</label>',
       '<input class="demo-popup-input w-input" id="demo-company-name" name="Company Name" data-name="Company Name" maxlength="256" placeholder="Enter your company" type="text" required>',
       "</div>",
+     '<div class="demo-popup-field full-width">',
+'<label class="demo-popup-label">Solution of Interest *</label>',
+'<div class="solution-checkbox-group">',
+'<label><input type="checkbox" name="solution" value="CRM Solutions"> CRM Solutions</label>',
+'<label><input type="checkbox" name="solution" value="ERP Systems"> ERP Systems</label>',
+'<label><input type="checkbox" name="solution" value="Custom Software Development"> Custom Software Development</label>',
+'<label><input type="checkbox" name="solution" value="Business Automation"> Business Automation</label>',
+'<label><input type="checkbox" name="solution" value="Web Applications"> Web Applications</label>',
+'<label><input type="checkbox" name="solution" value="Analytics & Dashboards"> Analytics & Dashboards</label>',
+'<label><input type="checkbox" name="solution" value="Smart Retail Solutions"> Smart Retail Solutions</label>',
+'</div>',
+'</div>',
       '<div class="demo-popup-field full-width">',
       '<label class="demo-popup-label" for="demo-organization-size">Organization Size *</label>',
       '<select class="demo-popup-select w-select" id="demo-organization-size" name="Organization Size" data-name="Organization Size" required>',
       createOptions(organizationSizes, "Select..."),
       "</select>",
       "</div>",
-      '<div class="demo-popup-field full-width">',
-      '<label class="demo-popup-label" for="demo-solution-interest">Solution of Interest *</label>',
-      '<select class="demo-popup-select w-select" id="demo-solution-interest" name="Solution of Interest" data-name="Solution of Interest" required>',
-      createOptions(solutions, "Please Select"),
-      "</select>",
-      "</div>",
-      '<div class="demo-popup-field full-width phone-full-width">',
-      '<label class="demo-popup-label" for="demo-phone">Phone</label>',
-      '<input class="demo-popup-input w-input" id="demo-phone" name="Phone" data-name="Phone" maxlength="256" placeholder="Enter your phone number" type="tel">',
-      "</div>",
+      
+      
       '<div class="demo-popup-success">Thank you. Your email app is opening with the enquiry details.</div>',
       '<button class="demo-popup-submit w-button" type="submit">Request Free Demo</button>',
       "</form>",
@@ -168,7 +179,7 @@
       overlay.classList.add("is-open");
       var firstInput = overlay.querySelector("input, select, button");
       if (firstInput) {
-        firstInput.focus();
+        //firstInput.focus();
       }
     }, 20);
   }
@@ -216,7 +227,10 @@
         "Business Email: " + getFormValue(form, "Business Email"),
         "Company Name: " + getFormValue(form, "Company Name"),
         "Organization Size: " + getFormValue(form, "Organization Size"),
-        "Solution of Interest: " + getFormValue(form, "Solution of Interest"),
+        "Solution of Interest: " +
+Array.from(form.querySelectorAll('input[name="solution"]:checked'))
+.map(el => el.value)
+.join(", "),
         "Phone: " + (getFormValue(form, "Phone") || "Not provided")
       ].join("\n");
 
