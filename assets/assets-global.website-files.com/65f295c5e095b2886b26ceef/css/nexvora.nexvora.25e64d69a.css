@@ -1,5 +1,12 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"); */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap");
+@font-face {
+  font-family: "Doyle";
+  src: url("../fonts/Doyle.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
 html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -267,7 +274,7 @@ body {
   background-color: #fff;
   min-height: 100%;
   margin: 0;
-  font-family: Inter, Arial, sans-serif;
+  font-family: 'IBM Plex Sans', Arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
 }
@@ -1466,7 +1473,7 @@ textarea.w-select {
   -webkit-tap-highlight-color: transparent;
   background: rgba(0, 0, 0, .9);
   outline: 0;
-  font-family: Inter, Arial, sans-serif;
+  font-family: 'IBM Plex Sans', Arial, sans-serif;
   font-size: 17px;
   font-style: normal;
   font-weight: 300;
@@ -2148,7 +2155,7 @@ textarea.w-select {
   --primary-bg-color: #f5f5f5;
   --black: black;
   --dark-white-color: #ced8e1;
-  --font-family: Inter, Arial, sans-serif;
+  --font-family: 'IBM Plex Sans', Arial, sans-serif;
 }
 
 .w-layout-blockcontainer {
@@ -2237,7 +2244,7 @@ textarea.w-select {
 body {
   background-color: var(--transparent);
   color: var(--paragraph-color);
-  font-family: Inter, Arial, sans-serif;
+  font-family: 'IBM Plex Sans', Arial, sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
@@ -2247,7 +2254,7 @@ h1 {
   color: var(--black);
   margin-top: 0;
   margin-bottom: 0;
-  font-family: Inter, Arial, sans-serif;
+  font-family: "Doyle", Georgia, serif;
   font-size: 54px;
   font-weight: 600;
   line-height: 1.2;
@@ -2257,7 +2264,7 @@ h2 {
   color: var(--black);
   margin-top: 0;
   margin-bottom: 0;
-  font-family: Inter, Arial, sans-serif;
+  font-family: "Doyle", Georgia, serif;
   font-size: 42px;
   font-weight: 600;
   line-height: 1.3;
@@ -2267,7 +2274,7 @@ h3 {
   color: var(--black);
   margin-top: 0;
   margin-bottom: 0;
-  font-family: Inter, Arial, sans-serif;
+  font-family: "Doyle", Georgia, serif;
   font-size: 28px;
   font-weight: 600;
   line-height: 1.2;
@@ -2638,11 +2645,12 @@ figure {
   border-bottom-right-radius: 60px;
   border-bottom-left-radius: 60px;
   position: relative;
+  top:-15px;
 }
 
 .breadcrumb-wrapper {
   z-index: 3;
-  padding-top: 170px;
+  padding-top: 100px;
   padding-bottom: 50px;
   position: relative;
 }
@@ -2688,7 +2696,7 @@ figure {
 
 .single-page-link {
   color: var(--paragraph-color);
-  font-family: Inter, Arial, sans-serif;
+  font-family: 'IBM Plex Sans', Arial, sans-serif;
   font-weight: 400;
   line-height: 1.2;
   text-decoration: none;
@@ -2701,7 +2709,7 @@ figure {
 
 .page-link-text {
   color: var(--black);
-  font-family: Inter, Arial, sans-serif;
+  font-family: 'IBM Plex Sans', Arial, sans-serif;
   font-weight: 500;
   line-height: 1.2;
 }
@@ -2868,7 +2876,7 @@ figure {
   color: var(--black);
   width: 100%;
   padding: 10px 20px;
-  font-family: Inter, Arial, sans-serif;
+  font-family: 'IBM Plex Sans', Arial, sans-serif;
   font-weight: 500;
   text-decoration: none;
   transition: background-color .3s;
@@ -3831,7 +3839,7 @@ figure {
   display: flex;
   position: -webkit-sticky;
   position: sticky;
-  top: 30px;
+  top: 90px;
   overflow: hidden;
 }
 
@@ -3870,7 +3878,7 @@ figure {
   display: flex;
   position: -webkit-sticky;
   position: sticky;
-  top: 30px;
+  top: 90px;
   overflow: hidden;
 }
 
@@ -3900,7 +3908,7 @@ figure {
   display: flex;
   position: -webkit-sticky;
   position: sticky;
-  top: 30px;
+  top: 90px;
   overflow: hidden;
 }
 
@@ -6261,6 +6269,7 @@ figure {
 .fun-fact-heading-text {
   color: var(--black);
   font-size: 42px;
+  font-family: 'IBM Plex Sans', Arial, sans-serif !important;
   font-weight: 600;
   line-height: 1;
 }
@@ -15666,7 +15675,7 @@ figure {
 
 /* Nexvora client update layer */
 body {
-  font-family: Inter, Arial, sans-serif;
+  font-family: 'IBM Plex Sans', Arial, sans-serif;
 }
 
 .page-wrapper {
@@ -15736,13 +15745,14 @@ body {
 .hero-title-two,
 .breadcrumb-title,
 .section-title {
+  font-family: "Doyle", Georgia, serif;
   letter-spacing: 0;
   line-height: 1.3;
 }
 
 .section-title,
 .breadcrumb-title {
-  font-family: Inter, Arial, sans-serif;
+  font-family: "Doyle", Georgia, serif;
   font-weight: 600;
 }
 
@@ -15751,7 +15761,7 @@ body {
 .footer-about-excerpt,
 .hero-excerpt,
 .key-feature-excerpt {
-  font-family: Inter, Arial, sans-serif;
+  font-family: 'IBM Plex Sans', Arial, sans-serif;
   font-weight: 400;
 }
 
@@ -15842,7 +15852,7 @@ body {
 
 .product-secondary-link {
   color: #0d1812;
-  font-family: Inter, Arial, sans-serif;
+  font-family: 'IBM Plex Sans', Arial, sans-serif;
   font-size: 16px;
   font-weight: 600;
   text-decoration: none;
@@ -16078,7 +16088,7 @@ body {
   border-radius: 8px;
   background: rgba(39, 104, 255, 0.1);
   color: #2768ff;
-  font-family: Inter, Arial, sans-serif;
+  font-family: 'IBM Plex Sans', Arial, sans-serif;
   font-weight: 700;
 }
 
@@ -16097,7 +16107,7 @@ body {
   z-index: 2;
   margin-top: 0;
   margin-bottom: 16px;
-  font-family: Inter, Arial, sans-serif;
+  font-family: 'IBM Plex Sans', Arial, sans-serif;
   font-size: 30px;
   line-height: 1.2;
 }
@@ -16209,7 +16219,7 @@ body {
   display: block;
   margin-bottom: 10px;
   color: #0d1812;
-  font-family: Inter, Arial, sans-serif;
+  font-family: 'IBM Plex Sans', Arial, sans-serif;
   font-size: 22px;
   line-height: 1.25;
 }
@@ -16265,7 +16275,7 @@ body {
   margin-top: 0;
   margin-bottom: 10px;
   color: #ffffff;
-  font-family: Inter, Arial, sans-serif;
+  font-family: 'IBM Plex Sans', Arial, sans-serif;
   font-size: 30px;
   line-height: 1.25;
 }
@@ -16275,6 +16285,186 @@ body {
   color: rgba(255, 255, 255, 0.78);
   font-size: 16px;
   line-height: 1.65;
+}
+
+.home-product-theme {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 14% 22%, rgba(194, 249, 108, 0.28), transparent 28%),
+    radial-gradient(circle at 88% 46%, rgba(91, 147, 255, 0.2), transparent 30%),
+    linear-gradient(180deg, #ffffff 0%, #f7fbff 45%, #ffffff 100%);
+}
+
+.home-product-theme .product-suite-title {
+  position: relative;
+  max-width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.product-section-kicker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  padding: 8px 14px;
+  border: 1px solid rgba(39, 104, 255, 0.16);
+  border-radius: 999px;
+  background: #ffffff;
+  color: #2768ff;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.home-product-theme .nexvora-product-grid {
+  gap: 20px;
+}
+
+.home-product-theme .nexvora-product-card {
+  display: flex;
+  min-height: 320px;
+  flex-direction: column;
+  border-color: rgba(13, 24, 18, 0.08);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94) 0%, rgba(247, 251, 255, 0.94) 100%);
+  box-shadow: 0 18px 50px rgba(13, 24, 18, 0.07);
+}
+
+.home-product-theme .nexvora-product-card:before {
+  top: auto;
+  right: 12px;
+  bottom: 12px;
+  width: 92px;
+  height: 92px;
+  border-radius: 999px;
+  background: rgba(194, 249, 108, 0.42);
+  filter:blur(20px);
+  transform: none;
+}
+
+.home-product-theme .nexvora-product-card:nth-child(2):before {
+  background: rgba(188, 222, 230, 0.54);
+}
+
+.home-product-theme .nexvora-product-card:nth-child(3):before {
+  background: rgba(219, 230, 188, 0.58);
+}
+
+.home-product-theme .nexvora-product-card:nth-child(4):before {
+  background: rgba(91, 147, 255, 0.18);
+}
+
+.home-product-theme .nexvora-product-card:after {
+  background: linear-gradient(135deg, rgba(39, 104, 255, 0.1), rgba(194, 249, 108, 0.12));
+  opacity: 0;
+}
+
+.home-product-theme .nexvora-product-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(39, 104, 255, 0.22);
+  color: #0d1812;
+  box-shadow: 0 26px 70px rgba(13, 24, 18, 0.11);
+}
+
+.home-product-theme .nexvora-product-card:hover:after {
+  opacity: 1;
+}
+
+.home-product-theme .nexvora-product-card:hover:before {
+  transform: scale(1.08);
+}
+
+.home-product-theme .product-card-header {
+  justify-content: flex-start;
+}
+
+.home-product-theme .product-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(194, 249, 108, 0.7), rgba(91, 147, 255, 0.22));
+  color: #0d1812;
+  box-shadow: inset 0 0 0 1px rgba(13, 24, 18, 0.06);
+}
+
+.home-product-theme .nexvora-product-card:nth-child(2) .product-icon {
+  background: linear-gradient(135deg, rgba(188, 222, 230, 0.85), rgba(39, 104, 255, 0.16));
+}
+
+.home-product-theme .nexvora-product-card:nth-child(3) .product-icon {
+  background: linear-gradient(135deg, rgba(219, 230, 188, 0.86), rgba(194, 249, 108, 0.2));
+}
+
+.home-product-theme .nexvora-product-card:nth-child(4) .product-icon {
+  background: linear-gradient(135deg, rgba(91, 147, 255, 0.22), rgba(182, 76, 230, 0.16));
+}
+
+.home-product-theme .nexvora-product-card:hover .product-icon,
+.home-product-theme .featured-product .product-icon {
+  color: #0d1812;
+}
+
+.home-product-theme .nexvora-product-label,
+.home-product-theme .featured-product .nexvora-product-label,
+.home-product-theme .nexvora-product-card:hover .nexvora-product-label {
+  background: transparent;
+  color: #2768ff;
+  padding: 0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.home-product-theme .nexvora-product-card h3 {
+  max-width: 430px;
+  color: #0d1812;
+  font-size: 28px;
+}
+
+.home-product-theme .nexvora-product-card:hover h3 {
+  color: #0d1812;
+}
+
+.home-product-theme .nexvora-product-card p,
+.home-product-theme .nexvora-product-card.featured-product p,
+.home-product-theme .nexvora-product-card:hover p,
+.home-product-theme .nexvora-product-card.featured-product:hover p {
+  color: #4d4d4d;
+}
+
+.home-product-theme .nexvora-product-card p {
+  min-height: 112px;
+}
+
+.home-product-theme .product-feature-list {
+  margin-top: auto;
+  padding-top: 26px;
+}
+
+.home-product-theme .product-feature-list span,
+.home-product-theme .featured-product .product-feature-list span,
+.home-product-theme .nexvora-product-card:hover .product-feature-list span {
+  border: 1px solid rgba(13, 24, 18, 0.08);
+  border-radius: 999px;
+  background: #ffffff;
+  color: #253142;
+}
+
+.home-product-theme .product-flow-band {
+  border-color: rgba(13, 24, 18, 0.08);
+  background: rgba(13, 24, 18, 0.08);
+  box-shadow: 0 18px 50px rgba(13, 24, 18, 0.06);
+}
+
+.home-product-theme .product-flow-item {
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.home-product-theme .product-flow-item:hover {
+  background: #f7fbff;
 }
 
 @keyframes productFloat {
@@ -16521,7 +16711,7 @@ p,
 .small,
 .license-details,
 .style-guide-short-info {
-  font-family: Inter, Arial, sans-serif;
+  font-family: 'IBM Plex Sans', Arial, sans-serif;
   font-weight: 400;
 }
 
@@ -16718,5 +16908,352 @@ b,
 
 .main-blog-footer-block {
     margin-top: auto;
+}
+
+h1,
+h2,
+h3,
+.hero-one-title,
+.hero-title-two,
+.breadcrumb-title,
+.section-title,
+.section-title-2,
+.style-guide-heading,
+.heading-two,
+.heading-three,
+.newsletter-title,
+.client-slider-title,
+.faq-title,
+.pricing-heading,
+.pricing-heading-two,
+.licenses-title,
+.fun-fact-heading-text,
+.fun-fact-title,
+.our-principles-item-title,
+.our-journey-title,
+.our-wokring-process-title,
+.job-list-item-title,
+.compare-heading-title,
+.contact-info-heading,
+.content-title,
+.changlelog-content-sub-title,
+.career-responsibilities-title,
+.featured-sub-title,
+.feature-call-service-title,
+.awesome-feature-title,
+.preview-title,
+.preview-section-title,
+.preview-feature-title,
+.product-suite-title,
+.nexvora-product-card h3,
+.product-cta-strip h2 {
+  font-family: "Doyle", Georgia, serif;
+}
+
+.about-hero-section,
+.fun-fact-section,
+.our-principles-section,
+.our-journey-section {
+  position: relative;
+}
+
+.about-hero-section {
+  background: #fff;
+  padding-top: 72px;
+  padding-bottom: 10px;
+}
+
+.fun-fact-section {
+  background: #fff;
+  padding-top: 28px;
+  padding-bottom: 72px;
+}
+
+.fun-fact-section .fun-fact-item-wrap {
+  margin-top: 0;
+}
+
+.our-principles-section {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+.our-journey-section {
+  background: #fff;
+  padding-top: 72px;
+}
+
+@media screen and (max-width: 991px) {
+  .about-hero-section {
+    padding-top: 56px;
+    padding-bottom: 48px;
+  }
+
+  .fun-fact-section {
+    padding-top: 24px;
+    padding-bottom: 56px;
+  }
+
+  .our-principles-section {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  .our-journey-section {
+    padding-top: 56px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .about-hero-section {
+    padding-top: 44px;
+    padding-bottom: 40px;
+  }
+
+  .fun-fact-section {
+    padding-top: 18px;
+    padding-bottom: 44px;
+  }
+
+  .our-principles-section {
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
+
+  .our-journey-section {
+    padding-top: 44px;
+  }
+}
+
+.blog-page-theme {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 12%, rgba(194, 249, 108, 0.24), transparent 26%),
+    radial-gradient(circle at 88% 28%, rgba(91, 147, 255, 0.16), transparent 30%),
+    linear-gradient(180deg, #ffffff 0%, #f7fbff 52%, #ffffff 100%);
+}
+
+.blog-page-theme .blog-collection-list.grid-item-2 {
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  align-items: stretch;
+}
+
+.blog-page-theme .blog-collection-item.w-dyn-item:first-child {
+  grid-column: 1 / -1;
+}
+
+.blog-page-theme .main-blog-item-wrap {
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid rgba(13, 24, 18, 0.08);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 18px 50px rgba(13, 24, 18, 0.07);
+  transition: transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease;
+}
+
+.blog-page-theme .main-blog-item-wrap:hover {
+  transform: translateY(-6px);
+  border-color: rgba(39, 104, 255, 0.22);
+  box-shadow: 0 26px 70px rgba(13, 24, 18, 0.11);
+}
+
+.blog-page-theme .main-blog-item {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  padding: 12px;
+}
+
+.blog-page-theme .main-blog-image-link-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #edf4ff;
+}
+
+.blog-page-theme .main-blog-image-link-wrap:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(13, 24, 18, 0) 48%, rgba(13, 24, 18, 0.18) 100%);
+  opacity: 0;
+  transition: opacity 260ms ease;
+}
+
+.blog-page-theme .main-blog-item-wrap:hover .main-blog-image-link-wrap:after {
+  opacity: 1;
+}
+
+.blog-page-theme .main-blog-image {
+  width: 100%;
+  height: 260px;
+  border-radius: 8px;
+  object-fit: cover;
+  transform: scale(1.01);
+  transition: transform 420ms ease;
+}
+
+.blog-page-theme .main-blog-item-wrap:hover .main-blog-image {
+  transform: scale(1.06);
+}
+
+.blog-page-theme .main-blog-content-wrap.margin-top-32px,
+.blog-page-theme .main-blog-content-wrap {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 0;
+  margin-bottom:24px;
+  padding: 24px 18px 0;
+}
+.mb-0{
+  margin-bottom: 0px !important;
+}
+
+.blog-page-theme .main-blog-name-link {
+  color: #0d1812;
+  font-family: "Doyle", Georgia, serif;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.18;
+}
+
+.blog-page-theme .main-blog-name-link:hover {
+  color: #2768ff;
+}
+
+.blog-page-theme .blog-excerpt {
+  min-height: auto;
+  color: #4d4d4d;
+  font-size: 15.5px;
+  line-height: 1.65;
+}
+
+.blog-page-theme .blog-item-boder-line {
+  display: none;
+}
+
+.blog-page-theme .main-blog-footer-block {
+  margin: auto 18px 12px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(13, 24, 18, 0.08);
+}
+
+.blog-page-theme .main-blog-meta-date {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 7px 12px;
+  border: 1px solid rgba(39, 104, 255, 0.16);
+  border-radius: 999px;
+  background: #f7fbff;
+  color: #2768ff;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.blog-page-theme .blog-view-more-link-wrap {
+  width: 44px;
+  height: 44px;
+  border-color: rgba(13, 24, 18, 0.1);
+  border-radius: 999px;
+  background: #ffffff;
+  box-shadow: 0 10px 24px rgba(13, 24, 18, 0.08);
+}
+
+.blog-page-theme .blog-view-more-link-wrap:hover {
+  border-color: #2768ff;
+  background: #2768ff;
+}
+
+.blog-page-theme .blog-collection-item.w-dyn-item:first-child .main-blog-item {
+  display: grid;
+  grid-template-columns: minmax(0, 0.96fr) minmax(0, 1.04fr);
+  gap: 0;
+  align-items: stretch;
+}
+
+.blog-page-theme .blog-collection-item.w-dyn-item:first-child .main-blog-image-link-wrap {
+  min-height: 100%;
+}
+
+.blog-page-theme .blog-collection-item.w-dyn-item:first-child .main-blog-image {
+  height: 100%;
+  min-height: 420px;
+}
+
+.blog-page-theme .blog-collection-item.w-dyn-item:first-child .main-blog-content-wrap {
+  justify-content: center;
+  padding: 34px 34px 0;
+}
+
+.blog-page-theme .blog-collection-item.w-dyn-item:first-child .main-blog-name-link {
+  font-size: 38px;
+}
+
+.blog-page-theme .blog-collection-item.w-dyn-item:first-child .main-blog-footer-block {
+  margin: auto 0px 22px;
+  width: 100%;
+}
+
+.blog-page-theme .pagination-button-wrap {
+  justify-content: center;
+}
+
+@media screen and (max-width: 991px) {
+  .blog-page-theme .blog-collection-list.grid-item-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-page-theme .blog-collection-item.w-dyn-item:first-child .main-blog-item {
+    display: flex;
+  }
+
+  .blog-page-theme .blog-collection-item.w-dyn-item:first-child .main-blog-image {
+    min-height: 0;
+    height: 320px;
+  }
+
+  .blog-page-theme .blog-collection-item.w-dyn-item:first-child .main-blog-content-wrap {
+    padding: 24px 18px 0;
+  }
+
+  .blog-page-theme .blog-collection-item.w-dyn-item:first-child .main-blog-name-link {
+    font-size: 30px;
+  }
+
+  .blog-page-theme .blog-collection-item.w-dyn-item:first-child .main-blog-footer-block {
+    margin: auto 18px 12px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .blog-page-theme .main-blog-item {
+    padding: 10px;
+  }
+
+  .blog-page-theme .main-blog-image,
+  .blog-page-theme .blog-collection-item.w-dyn-item:first-child .main-blog-image {
+    height: 220px;
+  }
+
+  .blog-page-theme .main-blog-name-link,
+  .blog-page-theme .blog-collection-item.w-dyn-item:first-child .main-blog-name-link {
+    font-size: 24px;
+    line-height: 1.22;
+  }
+
+  .blog-page-theme .blog-excerpt {
+    font-size: 14px;
+  }
+
+  .blog-page-theme .main-blog-footer-block {
+    align-items: center;
+    gap: 14px;
+  }
 }
 

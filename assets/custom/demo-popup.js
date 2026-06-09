@@ -142,15 +142,18 @@
       '<input class="demo-popup-input w-input" id="demo-company-name" name="Company Name" data-name="Company Name" maxlength="256" placeholder="Enter your company" type="text" required>',
       "</div>",
      '<div class="demo-popup-field full-width">',
-'<label class="demo-popup-label">Solution of Interest *</label>',
-'<div class="solution-checkbox-group">',
-'<label><input type="checkbox" name="solution" value="CRM Solutions"> CRM Solutions</label>',
-'<label><input type="checkbox" name="solution" value="ERP Systems"> ERP Systems</label>',
-'<label><input type="checkbox" name="solution" value="Custom Software Development"> Custom Software Development</label>',
-'<label><input type="checkbox" name="solution" value="Business Automation"> Business Automation</label>',
-'<label><input type="checkbox" name="solution" value="Web Applications"> Web Applications</label>',
-'<label><input type="checkbox" name="solution" value="Analytics & Dashboards"> Analytics & Dashboards</label>',
-'<label><input type="checkbox" name="solution" value="Smart Retail Solutions"> Smart Retail Solutions</label>',
+'<label class="demo-popup-label" id="demo-solution-label">Solution of Interest *</label>',
+'<div class="demo-multiselect" data-demo-multiselect>',
+'<button class="demo-multiselect-toggle" type="button" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="demo-solution-label demo-solution-selected">',
+'<span id="demo-solution-selected" data-demo-multiselect-text>Select solutions...</span>',
+'<span class="demo-multiselect-arrow" aria-hidden="true"></span>',
+'</button>',
+'<div class="demo-multiselect-menu" role="listbox" aria-multiselectable="true">',
+solutions.map(function (solution) {
+  return '<label class="demo-multiselect-option"><input type="checkbox" name="solution" value="' + solution + '"> <span>' + solution + '</span></label>';
+}).join(""),
+'</div>',
+'<div class="demo-multiselect-selected-list" data-demo-multiselect-selected aria-live="polite"></div>',
 '</div>',
 '</div>',
       '<div class="demo-popup-field full-width">',
@@ -198,16 +201,90 @@
     return field ? field.value.trim() : "";
   }
 
+  function hasFormInput(form) {
+    return Array.prototype.some.call(form.elements, function (field) {
+      if (!field.name || field.type === "submit" || field.type === "button") {
+        return false;
+      }
+
+      if (field.type === "checkbox" || field.type === "radio") {
+        return field.checked;
+      }
+
+      return field.value && field.value.trim() !== "";
+    });
+  }
+
+  function initMultiSelect(overlay) {
+    var multiSelect = overlay.querySelector("[data-demo-multiselect]");
+    if (!multiSelect) return;
+
+    var toggle = multiSelect.querySelector(".demo-multiselect-toggle");
+    var text = multiSelect.querySelector("[data-demo-multiselect-text]");
+    var selectedList = multiSelect.querySelector("[data-demo-multiselect-selected]");
+    var checkboxes = Array.prototype.slice.call(multiSelect.querySelectorAll('input[type="checkbox"]'));
+
+    function getSelectedValues() {
+      return checkboxes.filter(function (checkbox) {
+        return checkbox.checked;
+      }).map(function (checkbox) {
+        return checkbox.value;
+      });
+    }
+
+    function updateText() {
+      var selectedValues = getSelectedValues();
+      text.textContent = selectedValues.length ? selectedValues.length + " selected" : "Select solutions...";
+      selectedList.innerHTML = selectedValues.map(function (value) {
+        return '<span class="demo-multiselect-chip">' + value + "</span>";
+      }).join("");
+      multiSelect.classList.toggle("has-selection", selectedValues.length > 0);
+      if (selectedValues.length) {
+        multiSelect.classList.remove("has-error");
+      }
+    }
+
+    function closeMenu() {
+      multiSelect.classList.remove("is-open");
+      toggle.setAttribute("aria-expanded", "false");
+    }
+
+    toggle.addEventListener("click", function () {
+      var isOpen = multiSelect.classList.toggle("is-open");
+      toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+
+    checkboxes.forEach(function (checkbox) {
+      checkbox.addEventListener("change", updateText);
+    });
+
+    document.addEventListener("click", function (event) {
+      if (!multiSelect.contains(event.target)) {
+        closeMenu();
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        closeMenu();
+      }
+    });
+
+    updateText();
+  }
+
   function bindPopup(overlay) {
     var closeButton = overlay.querySelector(".demo-popup-close");
     var form = overlay.querySelector("#demo-enquiry-form");
+    var multiSelect = overlay.querySelector("[data-demo-multiselect]");
+    initMultiSelect(overlay);
 
     closeButton.addEventListener("click", function () {
       closePopup(overlay);
     });
 
     overlay.addEventListener("click", function (event) {
-      if (event.target === overlay) {
+      if (event.target === overlay && !hasFormInput(form)) {
         closePopup(overlay);
       }
     });
@@ -220,6 +297,21 @@
 
     form.addEventListener("submit", function (event) {
       event.preventDefault();
+      var selectedSolutions = Array.from(form.querySelectorAll('input[name="solution"]:checked'))
+        .map(function (el) { return el.value; });
+
+      if (!selectedSolutions.length) {
+        if (multiSelect) {
+          multiSelect.classList.add("has-error");
+          multiSelect.querySelector(".demo-multiselect-toggle").focus();
+        }
+        return;
+      }
+
+      if (multiSelect) {
+        multiSelect.classList.remove("has-error");
+      }
+
       var subject = "Free Demo Enquiry - " + getFormValue(form, "Company Name");
       var body = [
         "First Name: " + getFormValue(form, "First Name"),
@@ -227,10 +319,7 @@
         "Business Email: " + getFormValue(form, "Business Email"),
         "Company Name: " + getFormValue(form, "Company Name"),
         "Organization Size: " + getFormValue(form, "Organization Size"),
-        "Solution of Interest: " +
-Array.from(form.querySelectorAll('input[name="solution"]:checked'))
-.map(el => el.value)
-.join(", "),
+        "Solution of Interest: " + selectedSolutions.join(", "),
         "Phone: " + (getFormValue(form, "Phone") || "Not provided")
       ].join("\n");
 
