@@ -314,8 +314,7 @@ solutions.map(function (solution) {
 
       var subject = "Free Demo Enquiry - " + getFormValue(form, "Company Name");
       var body = [
-        "First Name: " + getFormValue(form, "First Name"),
-        "Last Name: " + getFormValue(form, "Last Name"),
+        "Name: " + getFormValue(form, "Name"),
         "Business Email: " + getFormValue(form, "Business Email"),
         "Company Name: " + getFormValue(form, "Company Name"),
         "Organization Size: " + getFormValue(form, "Organization Size"),

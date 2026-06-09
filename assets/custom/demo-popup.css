@@ -197,7 +197,7 @@
   color: #0d1218;
   cursor: pointer;
   font-size: 26px;
-  line-height: 1;
+  line-height: 1.1;
 }
 .demo-popup-close:focus{
   outline-width: 0px !important;
