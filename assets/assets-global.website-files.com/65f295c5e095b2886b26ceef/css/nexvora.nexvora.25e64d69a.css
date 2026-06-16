@@ -2595,6 +2595,13 @@ figure {
   text-decoration: none;
   transition: box-shadow .3s, color .3s, background-color .3s;
 }
+.button-primary,
+.button-primary-for-header{
+ padding:14px 28px;
+ border-radius:12px;
+ font-size:16px;
+ font-weight:600;
+}
 
 .button-primary-for-header:hover {
   background-color: var(--black);
@@ -6769,6 +6776,8 @@ figure {
 }
 
 .career-video-banner-wrap {
+  padding-top:80px;
+padding-bottom:80px;
   border-radius: 30px;
   justify-content: center;
   align-items: center;
@@ -16025,6 +16034,14 @@ body {
   color: #0d1812;
   transition: transform 320ms ease, box-shadow 320ms ease, border-color 320ms ease, color 320ms ease;
 }
+.nexvora-product-card{
+ transition:0.3s ease;
+}
+
+.nexvora-product-card:hover{
+ transform:translateY(-8px);
+ box-shadow:0 15px 35px rgba(0,0,0,.12);
+}
 
 .nexvora-product-card:before {
   content: "";
@@ -16399,6 +16416,21 @@ body {
 
 .home-product-theme .nexvora-product-card:nth-child(4) .product-icon {
   background: linear-gradient(135deg, rgba(91, 147, 255, 0.22), rgba(182, 76, 230, 0.16));
+}
+.home-product-theme .nexvora-product-card:nth-child(6) .product-icon {
+  background: linear-gradient(
+    135deg,
+    rgba(188, 222, 230, 0.85),
+    rgba(39, 104, 255, 0.16)
+  );
+}
+
+.home-product-theme .nexvora-product-card:nth-child(8) .product-icon {
+  background: linear-gradient(
+    135deg,
+    rgba(91, 147, 255, 0.22),
+    rgba(182, 76, 230, 0.16)
+  );
 }
 
 .home-product-theme .nexvora-product-card:hover .product-icon,
@@ -16881,6 +16913,13 @@ b,
 }
 
 /* Blog Card Alignment Fix */
+.main-blog-item{
+ transition:.3s;
+}
+
+.main-blog-item:hover{
+ transform:translateY(-8px);
+}
 
 .main-blog-item {
     display: flex;
@@ -17349,3 +17388,93 @@ h3,
     color:#fff;
 }
 
+a,
+button,
+.w-button{
+ transition:.3s ease;
+}
+
+a:hover{
+ opacity:.8;
+}
+.why-us-section{
+    padding:100px 0;
+}
+
+.why-us-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+}
+
+.why-card{
+    background:#fff;
+    padding:30px;
+    border-radius:16px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.why-card:hover{
+    transform:translateY(-8px);
+}
+
+.why-card h3{
+    font-size:24px;
+    margin-bottom:15px;
+}
+
+.why-card p{
+    font-size:16px;
+    line-height:1.7;
+}
+
+@media(max-width:991px){
+    .why-us-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:767px){
+    .why-us-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+.why-card{
+    background:#ffffff;
+    padding:30px;
+    border-radius:16px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    transition:all 0.3s ease;
+    border:1px solid #e5e7eb;
+}
+
+.why-card:hover{
+    background: linear-gradient(
+        135deg,
+        #021b2d 0%,
+        #173b7a 45%,
+        #2563eb 100%
+    );
+}
+
+.why-card h3{
+    color:#111827;
+    transition:0.3s;
+}
+
+.why-card p{
+    color:#6b7280;
+    transition:0.3s;
+}
+
+.why-card:hover h3,
+.why-card:hover p{
+    color:#fff;
+}
+.why-card:last-child{
+    grid-column:1 / span 2;
+    max-width:600px;
+    margin:0 auto;
+}
