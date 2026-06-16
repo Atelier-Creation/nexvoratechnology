@@ -6831,11 +6831,10 @@ figure {
 }
 
 .job-list-item-block:hover {
-  border-color: var(--white);
-  background-color: var(--white);
-  box-shadow: 6px 6px 0 0 var(--secondary-color);
+  border-color: #b3b3bf;
+  background-color: transparent;
+  box-shadow: none;
 }
-
 .job-list-collection-list {
   grid-column-gap: 20px;
   grid-row-gap: 20px;
@@ -15709,9 +15708,10 @@ body {
   min-height: calc(100vh - 220px);
   display: flex;
   align-items: center;
-  background:
+  /* background:
     radial-gradient(circle at 72% 26%, rgba(91, 147, 255, 0.18), transparent 34%),
-    linear-gradient(135deg, #f7fff0 0%, #ffffff 46%, #edf4ff 100%);
+    linear-gradient(135deg, #f7fff0 0%, #ffffff 46%, #edf4ff 100%); */
+     background: #ffffff;
 }
 
 .hero-section-wrapper-two {
@@ -16910,6 +16910,7 @@ b,
     margin-top: auto;
 }
 
+
 h1,
 h2,
 h3,
@@ -17284,5 +17285,67 @@ h3,
     align-items: center;
     gap: 14px;
   }
+}
+
+
+.product-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.product-icon{
+    width:65px;
+    height:65px;
+    border-radius:16px;
+    background:#eef4ff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+}
+
+.product-stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+    margin:24px 0;
+}
+
+.product-stats div{
+    padding:12px;
+    border-radius:12px;
+    background:#f8faff;
+    text-align:center;
+}
+
+.product-stats strong{
+    display:block;
+    font-size:18px;
+    color:#2563eb;
+}
+
+.product-stats span{
+    font-size:12px;
+    color:#666;
+}
+
+.product-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    margin-top:20px;
+    padding:12px 20px;
+    border-radius:10px;
+    background:#2563eb;
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.product-btn:hover{
+    background:#1d4ed8;
+    color:#fff;
 }
 
