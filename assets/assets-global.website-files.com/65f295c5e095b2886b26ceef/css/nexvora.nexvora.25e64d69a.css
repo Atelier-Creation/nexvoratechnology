@@ -2595,6 +2595,7 @@ figure {
   text-decoration: none;
   transition: box-shadow .3s, color .3s, background-color .3s;
 }
+
 .button-primary,
 .button-primary-for-header{
  padding:14px 28px;
@@ -17563,4 +17564,126 @@ a:hover{
     box-shadow:
       0 2px 0 #0a1d8f,
       0 0 15px rgba(47,99,224,.35) !important;
+}
+
+@media screen and (max-width: 767px) {
+
+  .integration-wrapper{
+    display:flex;
+    flex-direction:column;
+  }
+
+  .integration-content-block{
+    order:1;
+    text-align:center;
+  }
+
+  .integration-circle-animation-block{
+    order:2;
+    margin:20px auto;
+  }
+
+  .integration-content-block .button-wrap{
+    order:3;
+    margin-top:20px;
+  }
+
+}
+@media screen and (max-width: 767px) {
+
+  .main-blog-content-wrap {
+    display: block !important;
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  .main-blog-item {
+    height: auto !important;
+  }
+
+}
+@media screen and (max-width: 767px) {
+
+  .section-title-block.dispaly-flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .section-title-block .section-title{
+    margin-bottom: 0;
+  }
+
+  .section-title-block .button-wrap{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .section-title-block .button-primary{
+    min-width: 220px;
+  }
+
+}
+/* Mobile - Hide Get Demo Button */
+@media screen and (max-width: 767px) {
+  .button-primary-for-header {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 767px) {
+
+  .integration-wrapper{
+    display:flex;
+    flex-direction:column;
+  }
+
+  .integration-content-block{
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .integration-circle-animation-block{
+    order:2;
+    margin:20px auto;
+  }
+
+  .integration-content-block .button-wrap{
+    order:3;
+    margin-top:20px;
+  }
+}
+@media screen and (max-width: 767px) {
+
+  .integration-wrapper{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .integration-content-block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .integration-excerpt{
+    order: 1;
+  }
+
+  .integration-circle-animation-block{
+    order: 2;
+    margin: 30px auto;
+  }
+
+  .button-wrap{
+    order: 3;
+    margin-top: 25px;
+  }
+
 }
