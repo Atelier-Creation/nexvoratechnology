@@ -11876,7 +11876,7 @@ padding-bottom:80px;
     background-color: var(--primary-bg-color);
     flex: none;
     min-width: 300px;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     max-height: 100vh;
     padding: 20px 20px 0;
     position: fixed;
@@ -17076,10 +17076,7 @@ h3,
 
 .blog-page-theme {
   overflow: hidden;
-  background:
-    radial-gradient(circle at 12% 12%, rgba(194, 249, 108, 0.24), transparent 26%),
-    radial-gradient(circle at 88% 28%, rgba(91, 147, 255, 0.16), transparent 30%),
-    linear-gradient(180deg, #ffffff 0%, #f7fbff 52%, #ffffff 100%);
+  background:radial-gradient(circle at 12% 12% 12%, rgb(108 166 249 / 24%), transparent 26%), radial-gradient(circle at 88% 28%, rgba(91, 147, 255, 0.16), transparent 30%), linear-gradient(180deg, #ffffff 0%, #f7fbff 52%, #ffffff 100%);
 }
 
 .blog-page-theme .blog-collection-list.grid-item-2 {
