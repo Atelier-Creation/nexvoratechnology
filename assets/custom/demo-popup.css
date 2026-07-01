@@ -1233,7 +1233,7 @@ body.demo-popup-lock {
    CUSTOM HERO SECTION
    ========================================= */
 .custom-hero-section {
-  padding: 100px 5% 100px 5%;
+  padding: 100px 0% 100px 5%;
   background-color: #fafbfc;
   position: relative;
   overflow: hidden;
@@ -1256,7 +1256,7 @@ body.demo-popup-lock {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 60px;
+  gap: 0px;
   position: relative;
   z-index: 1;
 }
@@ -1264,7 +1264,7 @@ body.demo-popup-lock {
 /* Left Content */
 .custom-hero-content {
   flex: 1;
-  max-width: 650px;
+  max-width: 850px;
 }
 
 .custom-hero-image-wrap {
@@ -1281,6 +1281,7 @@ body.demo-popup-lock {
   height: auto;
   max-width: 100%;
   object-fit: contain;
+  scale:1.2;
 }
 
 .custom-hero-badge {
@@ -1306,8 +1307,8 @@ body.demo-popup-lock {
 }
 
 .custom-hero-title {
-  font-size: 31px;
-  line-height: 1.25;
+  font-size: 37px;
+  line-height: 1.45;
   font-weight: 800;
   color: #1a1e26;
   margin-bottom: 20px;

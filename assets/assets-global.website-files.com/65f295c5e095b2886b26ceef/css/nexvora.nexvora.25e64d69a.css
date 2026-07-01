@@ -17554,7 +17554,7 @@ a:hover{
 .w-button:active,
 .button-primary-for-header:active,
 .hero-newsletter-submit-button:active {
-    transform: translateY(6px);
+    /* transform: translateY(6px); */
 }
 .button-gradient-primary,
 .button-gradient-primary:visited{
