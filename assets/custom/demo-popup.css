@@ -1192,7 +1192,7 @@ body.demo-popup-lock {
 .cta-button:hover,
 .submit-button:hover,
 .preview-hero-video-button:hover {
-  transform: translateY(-4px) scale(1.03) !important;
+  /* transform: translateY(-4px) scale(1.03) !important; */
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12), 0 10px 10px rgba(0, 0, 0, 0.08) !important;
 }
 
@@ -1235,10 +1235,6 @@ body.demo-popup-lock {
 .custom-hero-section {
   padding: 100px 5% 100px 5%;
   background-color: #fafbfc;
-  background-image: url('../assets-global.website-files.com/65f295c5e095b2886b26ceef/hero-section-bg-full-width.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: right center;
   position: relative;
   overflow: hidden;
   font-family: 'Inter', sans-serif;
@@ -1271,10 +1267,20 @@ body.demo-popup-lock {
   max-width: 650px;
 }
 
-.custom-hero-spacer {
+.custom-hero-image-wrap {
   flex: 1;
   max-width: 600px;
-  aspect-ratio: 1.1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.custom-hero-image {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 .custom-hero-badge {
@@ -1460,8 +1466,12 @@ body.demo-popup-lock {
     align-items: flex-start !important;
     max-width: 100% !important;
   }
-  .custom-hero-spacer {
-    display: none !important;
+  .custom-hero-image-wrap {
+    width: 100% !important;
+    max-width: 500px !important;
+    margin: 30px auto 0 auto !important;
+    display: flex !important;
+    justify-content: center !important;
   }
   .custom-hero-form {
     justify-content: center !important;
