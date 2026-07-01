@@ -11877,7 +11877,7 @@ padding-bottom:80px;
     flex: none;
     min-width: 300px;
     /* min-height: 100vh; */
-    max-height: 100vh;
+    max-height: 60vh;
     padding: 20px 20px 0;
     position: fixed;
     top: 0%;
