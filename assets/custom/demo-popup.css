@@ -1776,3 +1776,26 @@ body.demo-popup-lock {
 .career-view-more-button-wrap:hover svg {
   transform: translate(4px, -4px) scale(1.1) !important;
 }
+
+/* =========================================
+   UPDATED BLOG CARD HOVER INTERACTION
+   ========================================= */
+
+.blog-view-more-icon {
+  transition: filter 300ms ease !important;
+}
+
+/* When the card is hovered, light up the arrow button and turn the icon white */
+.main-blog-item-wrap:hover .blog-view-more-link-wrap {
+  border-color: #2768ff !important;
+  background: #2768ff !important;
+}
+
+.main-blog-item-wrap:hover .blog-view-more-icon {
+  filter: brightness(0) invert(1) !important;
+}
+
+/* Direct button hover state */
+.blog-view-more-link-wrap:hover .blog-view-more-icon {
+  filter: brightness(0) invert(1) !important;
+}
