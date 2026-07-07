@@ -1296,7 +1296,7 @@ body.demo-popup-lock {
   background: rgba(39, 104, 255, 0.08);
   padding: 6px 14px;
   border-radius: 50px;
-  margin-bottom: 20px;
+  margin: 0px auto 20px auto;
 }
 
 .custom-hero-badge .badge-icon {
@@ -1501,14 +1501,14 @@ body.demo-popup-lock {
   .custom-hero-subtitle {
     max-width: 100% !important;
     font-size: 16px !important;
-    text-align: left;
+    text-align: center;
   }
 }
 
 @media (max-width: 767px) {
   .custom-hero-title {
     font-size: 32px !important;
-    text-align: left;
+    text-align: center;
   }
 
   .custom-hero-form-wrapper {
@@ -1575,10 +1575,10 @@ body.demo-popup-lock {
 
 /* Main Card Transition Overrides */
 .nexvora-product-card {
-  transition: transform 450ms cubic-bezier(0.25, 1, 0.5, 1), 
-              box-shadow 450ms cubic-bezier(0.25, 1, 0.5, 1), 
-              border-color 450ms cubic-bezier(0.25, 1, 0.5, 1), 
-              color 450ms cubic-bezier(0.25, 1, 0.5, 1) !important;
+  transition: transform 450ms cubic-bezier(0.25, 1, 0.5, 1),
+    box-shadow 450ms cubic-bezier(0.25, 1, 0.5, 1),
+    border-color 450ms cubic-bezier(0.25, 1, 0.5, 1),
+    color 450ms cubic-bezier(0.25, 1, 0.5, 1) !important;
 }
 
 /* Stacking Context & Contrast Control to ensure content is visible in front of background gradient */
@@ -1654,12 +1654,12 @@ body.demo-popup-lock {
 
 /* Statistics inside Cards (Products Page) */
 .product-stats div {
-  transition: background-color 450ms cubic-bezier(0.25, 1, 0.5, 1), 
-              border-color 450ms cubic-bezier(0.25, 1, 0.5, 1) !important;
+  transition: background-color 450ms cubic-bezier(0.25, 1, 0.5, 1),
+    border-color 450ms cubic-bezier(0.25, 1, 0.5, 1) !important;
   border: 1px solid transparent;
 }
 
-.product-stats strong, 
+.product-stats strong,
 .product-stats span {
   transition: color 450ms cubic-bezier(0.25, 1, 0.5, 1) !important;
 }
@@ -1671,7 +1671,8 @@ body.demo-popup-lock {
 }
 
 .nexvora-product-card:hover .product-stats strong {
-  color: #5b93ff !important; /* Vibrant Light Blue highlight */
+  color: #5b93ff !important;
+  /* Vibrant Light Blue highlight */
 }
 
 .nexvora-product-card:hover .product-stats span {
@@ -1717,9 +1718,9 @@ body.demo-popup-lock {
 
 /* Job List Card Hover Animation */
 .job-list-item-block {
-  transition: transform 450ms cubic-bezier(0.25, 1, 0.5, 1), 
-              border-color 450ms cubic-bezier(0.25, 1, 0.5, 1), 
-              box-shadow 450ms cubic-bezier(0.25, 1, 0.5, 1) !important;
+  transition: transform 450ms cubic-bezier(0.25, 1, 0.5, 1),
+    border-color 450ms cubic-bezier(0.25, 1, 0.5, 1),
+    box-shadow 450ms cubic-bezier(0.25, 1, 0.5, 1) !important;
 }
 
 .job-list-item-block:hover {
