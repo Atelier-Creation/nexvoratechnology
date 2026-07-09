@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html data-wf-domain="%%PUBLISH_URL_REPLACEMENT%%" data-wf-page="661e0c4e9543d43b5e77e8e7"
   data-wf-site="65f295c5e095b2886b26ceef" lang="en">
@@ -19,6 +19,80 @@
   <link href="../assets/assets-global.website-files.com/65f295c5e095b2886b26ceef/6603e88e2ebeae3ab2b0de0c_Favicon.png"
     rel="apple-touch-icon">
   <link href="assets/custom/demo-popup.css" rel="stylesheet" type="text/css">
+  <style>
+    /* Styling overrides to make the input fields visible with a subtle border */
+    .input-field {
+      border: 1px solid #cbd5e1 !important;
+      border-radius: 8px !important;
+      background-color: #ffffff !important;
+      color: #1e293b !important;
+      padding: 12px 18px !important;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+      min-height: 52px !important;
+    }
+    
+    .input-field:focus {
+      border-color: #2563eb !important;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12) !important;
+      outline: none !important;
+    }
+
+    /* Minimize the message textarea height */
+    .input-text-area {
+      border: 1px solid #cbd5e1 !important;
+      border-radius: 8px !important;
+      background-color: #ffffff !important;
+      color: #1e293b !important;
+      padding: 12px 18px !important;
+      min-height: 90px !important;
+      height: 90px !important;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+      resize: vertical !important;
+    }
+
+    .input-text-area:focus {
+      border-color: #2563eb !important;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12) !important;
+      outline: none !important;
+    }
+
+    /* Make sure the submit button is fully visible, centered, and styled nicely */
+    .submit-button {
+      background: linear-gradient(135deg, #2563eb, #1d4ed8) !important;
+      color: #ffffff !important;
+      border-radius: 50px !important;
+      padding: 14px 40px !important;
+      font-weight: 600 !important;
+      font-size: 16px !important;
+      border: none !important;
+      cursor: pointer !important;
+      transition: all 0.2s ease !important;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2) !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      margin-top: 10px !important;
+    }
+
+    .submit-button:hover {
+      background: linear-gradient(135deg, #1d4ed8, #1e40af) !important;
+      box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3) !important;
+      transform: translateY(-1px) !important;
+    }
+
+    /* Form grid adjustments */
+    .form-grid {
+      grid-row-gap: 20px !important;
+    }
+
+    /* Ensure form block is visible and not hidden by initial transforms */
+    .contact-form-block {
+      opacity: 1 !important;
+      transform: none !important;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05) !important;
+      border: 1px solid #f1f5f9 !important;
+    }
+  </style>
 </head>
 
 <body>
@@ -119,7 +193,7 @@
       <div class="w-layout-blockcontainer container w-container">
         <div class="breadcrumb-wrapper">
           <div class="breadcrumb-title-block align-item-center">
-            <h1 class="breadcrumb-title text-center max-width-780px">Let?s Build Your Next Business <span class="gradient-heading-text">System.</span></h1>
+            <h1 class="breadcrumb-title text-center max-width-780px">Lets Build Your Next Business <span class="gradient-heading-text">System.</span></h1>
           </div>
           <div class="breadcrumb-link-wrap"><a href="home-page/home-one.html" class="single-page-link">Home</a><img
               src="./assets/cdn.prod.website-files.com/65f295c5e095b2886b26ceef/65f91af3c05f0be69d39c865_link-separator-arrow.svg"
@@ -248,9 +322,11 @@
         <div class="footer-block-wrapper">
           <div class="footer-newsletter-wrap">
             <div class="footer-logo-link-block"><a href="/" class="footer-logo-link-wrap w-inline-block"><img
-                  src="./assets/cdn.prod.website-files.com/65f295c5e095b2886b26ceef/65f2b6b7ba141c96013aab67_brand-logo.png" loading="lazy"
-                  alt="Footer Logo" class="footer-logo"></a>
-              <div class="footer-about-excerpt max-width-470px">Nexvora Technologies builds CRM, ERP, custom software, automation, web apps, analytics, and smart retail solutions that help businesses operate smarter, faster, and more efficiently.</div>
+                  src="./assets/cdn.prod.website-files.com/65f295c5e095b2886b26ceef/65f2b6b7ba141c96013aab67_brand-logo.png"
+                  loading="lazy" alt="Footer Logo" class="footer-logo"></a>
+              <div class="footer-about-excerpt max-width-470px">Nexvora Technologies builds CRM, ERP, custom software,
+                automation, web apps, analytics, and smart retail solutions that help businesses operate smarter,
+                faster, and more efficiently.</div>
             </div>
             <div class="footer-newsletter-block">
               <div class="newsletter-title">Subscribe to Our Newsletter</div>
@@ -283,51 +359,43 @@
                           stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg></div>
                     <div class="footer-link-text">Home</div>
-                  </a><a href="#" class="footer-link-block w-inline-block">
+                  </a><a href="/about-us.html" class="footer-link-block w-inline-block">
                     <div class="footer-list-item-arrow-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="6"
                         height="10" viewBox="0 0 6 10" fill="none">
                         <path d="M1.24023 1.49135L4.73296 4.97907L1.24023 8.4668" stroke="currentColor"
                           stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg></div>
                     <div class="footer-link-text">About Us</div>
-                  </a><a href="#" class="footer-link-block w-inline-block">
+                  </a><a href="/Products.html" class="footer-link-block w-inline-block">
                     <div class="footer-list-item-arrow-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="6"
                         height="10" viewBox="0 0 6 10" fill="none">
                         <path d="M1.24023 1.49135L4.73296 4.97907L1.24023 8.4668" stroke="currentColor"
                           stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg></div>
-                    <div class="footer-link-text">Features</div>
-                  </a><a href="#" class="footer-link-block w-inline-block">
-                    <div class="footer-list-item-arrow-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="6"
-                        height="10" viewBox="0 0 6 10" fill="none">
-                        <path d="M1.24023 1.49135L4.73296 4.97907L1.24023 8.4668" stroke="currentColor"
-                          stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                      </svg></div>
-                    <div class="footer-link-text">Integration</div>
+                    <div class="footer-link-text">Product</div>
                   </a></div>
-                <div class="footer-link-list-block">
-                  <a href="#" class="footer-link-block w-inline-block">
+                <div class="footer-link-list-block"><a href="/careers.html" class="footer-link-block w-inline-block">
                     <div class="footer-list-item-arrow-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="6"
                         height="10" viewBox="0 0 6 10" fill="none">
                         <path d="M1.24023 1.49135L4.73296 4.97907L1.24023 8.4668" stroke="currentColor"
                           stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg></div>
                     <div class="footer-link-text">Career</div>
-                  </a><a href="#" class="footer-link-block w-inline-block">
+                  </a><a href="/blog.html" class="footer-link-block w-inline-block">
                     <div class="footer-list-item-arrow-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="6"
                         height="10" viewBox="0 0 6 10" fill="none">
                         <path d="M1.24023 1.49135L4.73296 4.97907L1.24023 8.4668" stroke="currentColor"
                           stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg></div>
                     <div class="footer-link-text">Blog</div>
-                  </a><a href="#" class="footer-link-block w-inline-block">
+                  </a><a href="/contact.html" class="footer-link-block w-inline-block">
                     <div class="footer-list-item-arrow-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="6"
                         height="10" viewBox="0 0 6 10" fill="none">
                         <path d="M1.24023 1.49135L4.73296 4.97907L1.24023 8.4668" stroke="currentColor"
                           stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg></div>
                     <div class="footer-link-text">Contact</div>
-                </div>
+                  </a></div>
               </div>
             </div>
             <!-- <div class="footer-block">
