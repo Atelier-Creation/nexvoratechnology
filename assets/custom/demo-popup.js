@@ -339,6 +339,18 @@ solutions.map(function (solution) {
         form.parentNode.insertBefore(messageEl, form.nextSibling);
       }
       
+      // Ensure the parent container allows flex items to wrap
+      var parent = form.parentNode;
+      if (parent) {
+        var computedStyle = window.getComputedStyle(parent);
+        if (computedStyle.display === "flex" || computedStyle.display === "inline-flex") {
+          parent.style.flexWrap = "wrap";
+        }
+      }
+      
+      // Style the message element to take up 100% width, forcing it to wrap to the next line
+      messageEl.style.width = "100%";
+      messageEl.style.flexBasis = "100%";
       messageEl.style.marginTop = "12px";
       messageEl.style.fontSize = "14px";
       messageEl.style.fontWeight = "500";
