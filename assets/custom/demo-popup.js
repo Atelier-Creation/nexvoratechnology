@@ -374,7 +374,10 @@ solutions.map(function (solution) {
         return;
       }
       
+      // Stop Webflow's native script from intercepting and failing the submission
       e.preventDefault();
+      e.stopPropagation();
+      e.stopImmediatePropagation();
       
       var emailInput = form.querySelector('input[type="email"]');
       if (!emailInput) return;
@@ -454,7 +457,7 @@ solutions.map(function (solution) {
           submitBtn.disabled = false;
         }
       });
-    });
+    }, true);
   }
 
   function init() {
