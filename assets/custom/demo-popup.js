@@ -322,13 +322,144 @@ solutions.map(function (solution) {
         "Phone: " + (getFormValue(form, "Phone") || "Not provided")
       ].join("\n");
 
+
       form.classList.add("is-submitted");
       window.location.href = "mailto:" + enquiryEmail + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
     });
   }
 
+  function initSubscriptionForms() {
+    var SCRIPT_URL = "https://script.google.com/macros/s/AKfycby5gJv3_lsKL77OqHpuKhg_NDCejffbTAgnwLwpUI8SBd2bOiL8Dpi_cBn6kkejtwLP/exec";
+
+    function showFormMessage(form, text, isSuccess) {
+      var messageEl = form.parentNode.querySelector('[data-form-feedback]');
+      if (!messageEl) {
+        messageEl = document.createElement("div");
+        messageEl.setAttribute("data-form-feedback", "");
+        form.parentNode.insertBefore(messageEl, form.nextSibling);
+      }
+      
+      messageEl.style.marginTop = "12px";
+      messageEl.style.fontSize = "14px";
+      messageEl.style.fontWeight = "500";
+      messageEl.style.textAlign = "center";
+      messageEl.style.display = "block";
+      
+      if (isSuccess === "warning") {
+        messageEl.style.color = "#f59e0b"; // Warning Orange
+      } else if (isSuccess === true) {
+        messageEl.style.color = "#10b981"; // Success Green
+      } else {
+        messageEl.style.color = "#ef4444"; // Error Red
+      }
+      
+      messageEl.textContent = text;
+      
+      if (form.feedbackTimeout) {
+        clearTimeout(form.feedbackTimeout);
+      }
+      form.feedbackTimeout = setTimeout(function () {
+        messageEl.style.display = "none";
+      }, 5000);
+    }
+
+    document.addEventListener("submit", function (e) {
+      var form = e.target;
+      
+      var isNewsletter = form.classList.contains("newsletter-form");
+      var isHeroNewsletter = form.classList.contains("hero-newsletter-form");
+      var isCustomHero = form.classList.contains("custom-hero-form");
+      
+      if (!isNewsletter && !isHeroNewsletter && !isCustomHero) {
+        return;
+      }
+      
+      e.preventDefault();
+      
+      var emailInput = form.querySelector('input[type="email"]');
+      if (!emailInput) return;
+      
+      var email = emailInput.value.trim();
+      
+      // Email validation
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        showFormMessage(form, "Please enter a valid email address.", false);
+        return;
+      }
+      
+      // Find submit button and apply loading state
+      var submitBtn = form.querySelector('input[type="submit"], button[type="submit"]');
+      var originalVal = "";
+      var waitText = "Please wait...";
+      if (submitBtn) {
+        originalVal = submitBtn.value || submitBtn.textContent;
+        waitText = submitBtn.getAttribute("data-wait") || "Please wait...";
+        if (submitBtn.tagName === "INPUT") {
+          submitBtn.value = waitText;
+        } else {
+          submitBtn.textContent = waitText;
+        }
+        submitBtn.disabled = true;
+      }
+      
+      // Determine source
+      var source = "Footer";
+      if (isCustomHero) {
+        source = "Hero Book a Demo";
+      } else if (isHeroNewsletter) {
+        source = "Hero Newsletter";
+      }
+      
+      var payload = {
+        email: email,
+        source: source,
+        userAgent: navigator.userAgent,
+        timestamp: new Date().toISOString()
+      };
+      
+      // Make POST request to Apps Script Web App
+      fetch(SCRIPT_URL, {
+        method: "POST",
+        body: JSON.stringify(payload)
+      })
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (result) {
+        if (result.success) {
+          if (result.message === "Already subscribed") {
+            showFormMessage(form, "This email is already subscribed!", "warning");
+          } else {
+            showFormMessage(form, "Subscribed successfully!", true);
+          }
+          
+          form.reset();
+        } else {
+          showFormMessage(form, result.message || "Something went wrong. Please try again.", false);
+        }
+      })
+      .catch(function (error) {
+        console.error("Subscription error:", error);
+        showFormMessage(form, "Something went wrong. Please try again later.", false);
+      })
+      .finally(function () {
+        // Restore submit button state
+        if (submitBtn) {
+          if (submitBtn.tagName === "INPUT") {
+            submitBtn.value = originalVal;
+          } else {
+            submitBtn.textContent = originalVal;
+          }
+          submitBtn.disabled = false;
+        }
+      });
+    });
+  }
+
   function init() {
     initHomeFaqAccordion();
+    initSubscriptionForms();
 
     var overlay = createPopup();
     bindPopup(overlay);
