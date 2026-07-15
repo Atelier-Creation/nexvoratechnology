@@ -5587,6 +5587,14 @@ figure {
   border-radius: 100%;
   width: 90px;
   height: 90px;
+  overflow: hidden;
+}
+
+.customer-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .customer-image-block {
@@ -9998,8 +10006,8 @@ figure {
   }
 
   .section-gap-y-axis-140px {
-    padding-top: 140px;
-    padding-bottom: 140px;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 
   .margin-top-64px {

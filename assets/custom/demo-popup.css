@@ -1237,7 +1237,7 @@ body.demo-popup-lock {
    CUSTOM HERO SECTION
    ========================================= */
 .custom-hero-section {
-  padding: 100px 0% 100px 5%;
+  padding: 100px 0% 0px 5%;
   background-color: #fafbfc;
   position: relative;
   overflow: hidden;
